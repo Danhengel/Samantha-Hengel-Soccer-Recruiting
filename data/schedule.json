@@ -1,6 +1,6 @@
 {
   "source": "https://ssprodst.blob.core.windows.net/calendars/481/113342.ics",
-  "updated": "2026-09-10T20:50:49.040805+00:00",
+  "updated": "2026-09-11T04:37:56.711280+00:00",
   "events": [
     {
       "start": "2026-07-15T19:00:00",
@@ -299,19 +299,19 @@
       "url": ""
     },
     {
+      "start": "2026-10-11T13:00:00",
+      "end": "2026-10-11T15:00:00",
+      "title": "U17G_09/10G GA Aspire @ FC Tampa Rangers N1 G2009/10",
+      "location": "Oscar Cooler Sports Complex Park  766 West Lutz Lake Fern Road, Lutz, FL 33548",
+      "description": "Arrival: 1 hour(s) in advance Game Type: Away Uniform: Navy Opponent: FC Tampa Rangers N1 G2009/10 ",
+      "url": ""
+    },
+    {
       "start": "2026-10-12T19:30:00",
       "end": "2026-10-12T21:00:00",
       "title": "U17G_09/10G GA Aspire - practice",
       "location": "J.C. Handly Sports Complex  3042 South Kings Avenue, Brandon, FL 33511",
       "description": "Arrival: 15 minutes in advance ",
-      "url": ""
-    },
-    {
-      "start": "2026-10-17T12:30:00",
-      "end": "2026-10-17T14:30:00",
-      "title": "U17G_09/10G GA Aspire @ FC Tampa Rangers N1 G2009/10",
-      "location": "Oscar Cooler Sports Complex Park  766 West Lutz Lake Fern Road, Lutz, FL 33548",
-      "description": "Field: advent stadium field Arrival: 1 hour(s) in advance Game Type: Away Uniform: Navy Opponent: FC Tampa Rangers N1 G2009/10 ",
       "url": ""
     },
     {
@@ -403,6 +403,14 @@
       "url": ""
     },
     {
+      "start": "2026-11-20T08:00:00",
+      "end": "2026-11-22T16:00:00",
+      "title": "U17G_09/10G GA Aspire @ NCFC tournament",
+      "location": "",
+      "description": "Game Type: Away Opponent: NCFC tournament  ",
+      "url": ""
+    },
+    {
       "start": "2026-11-23T19:30:00",
       "end": "2026-11-23T21:00:00",
       "title": "U17G_09/10G GA Aspire - practice",
@@ -451,14 +459,6 @@
       "url": ""
     },
     {
-      "start": "2027-02-28T09:00:00",
-      "end": "2027-02-28T11:00:00",
-      "title": "U17G_09/10G GA Aspire vs FC Tampa Rangers N1 G2009/10 Lady Rangers",
-      "location": "J.C. Handly Sports Complex  3042 South Kings Avenue, Brandon, FL 33511",
-      "description": "Field: Field 7 Arrival: 1 hour(s) in advance Game Type: Home Uniform: White Opponent: FC Tampa Rangers N1 G2009/10 Lady Rangers  ",
-      "url": ""
-    },
-    {
       "start": "2027-02-28T14:30:00",
       "end": "2027-02-28T16:30:00",
       "title": "U17G_09/10G GA Aspire vs Orlando City - Lake Nona Aspire 09/10",
@@ -496,6 +496,14 @@
       "title": "U17G_09/10G GA Aspire vs FL Premier FC FPFC N1 G2009/2010   TRP",
       "location": "J.C. Handly Sports Complex  3042 South Kings Avenue, Brandon, FL 33511",
       "description": "Field: Field 9 Game Type: Home Uniform: White Opponent: FL Premier FC FPFC N1 G2009/2010   TRP ",
+      "url": ""
+    },
+    {
+      "start": "2027-03-21T00:00:00",
+      "end": "2027-03-22T00:00:00",
+      "title": "U17G_09/10G GA Aspire vs FC Tampa Rangers N1 G2009/10 Lady Rangers",
+      "location": "J.C. Handly Sports Complex  3042 South Kings Avenue, Brandon, FL 33511",
+      "description": "Arrival: 1 hour(s) in advance Game Type: Home Uniform: White Opponent: FC Tampa Rangers N1 G2009/10 Lady Rangers  ",
       "url": ""
     },
     {
