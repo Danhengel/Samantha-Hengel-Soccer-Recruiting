@@ -1,4 +1,4 @@
-name: Remove homepage stats text
+name: Clean homepage hero artwork
 
 on:
   push:
@@ -21,9 +21,9 @@ jobs:
           python-version: '3.12'
 
       - name: Install image tools
-        run: pip install opencv-python-headless
+        run: pip install opencv-python-headless numpy
 
-      - name: Create clean frosted stats band
+      - name: Remove recruit CTA and repair lower-left panel
         run: |
           git show ba63531be7d34ca626850eaf90edb45b855967c8:assets/hero-defense-2028.webp > /tmp/original.webp
           python - <<'PY'
@@ -36,42 +36,113 @@ jobs:
 
           h, w = src.shape[:2]
           sx, sy = w / 1536.0, h / 1024.0
-
-          x1, y1, x2, y2 = [int(v) for v in (
-              62*sx, 724*sy, 982*sx, 792*sy
-          )]
-
-          roi = src[y1:y2, x1:x2].copy()
-
-          # Strong frosted-glass treatment removes embedded lettering
-          # while retaining the player's leg and the underlying scene.
-          blurred = cv2.GaussianBlur(roi, (0, 0), 18, 18)
-          cream = np.full_like(roi, (246, 241, 238))
-          frosted = cv2.addWeighted(blurred, 0.42, cream, 0.58, 0)
-
-          # Feather the panel edges for a natural transition.
-          rh, rw = roi.shape[:2]
-          yy = np.minimum(np.arange(rh), np.arange(rh)[::-1]).astype(np.float32)
-          xx = np.minimum(np.arange(rw), np.arange(rw)[::-1]).astype(np.float32)
-          vy = np.clip(yy / max(1, int(6*sy)), 0, 1)
-          vx = np.clip(xx / max(1, int(10*sx)), 0, 1)
-          alpha = np.minimum(vy[:, None], vx[None, :])
-          alpha = (1.00 * alpha)[..., None]
-
-          blended = (roi * (1-alpha) + frosted * alpha).astype(np.uint8)
           out = src.copy()
-          out[y1:y2, x1:x2] = blended
+
+          def scaled_rect(vals):
+              x1, y1, x2, y2 = vals
+              return (
+                  max(0, int(round(x1 * sx))),
+                  max(0, int(round(y1 * sy))),
+                  min(w, int(round(x2 * sx))),
+                  min(h, int(round(y2 * sy))),
+              )
+
+          # 1) Remove the embedded "Recruit Samantha" pill in the upper-right.
+          # Fit a smooth local background surface from pixels surrounding the CTA,
+          # then feather it into the artwork so there is no rectangular patch.
+          x1, y1, x2, y2 = scaled_rect((1135, 0, 1515, 108))
+          pad_x, pad_y = int(85 * sx), int(75 * sy)
+          ex1, ey1 = max(0, x1-pad_x), max(0, y1)
+          ex2, ey2 = min(w, x2+pad_x), min(h, y2+pad_y)
+
+          yy, xx = np.mgrid[ey1:ey2, ex1:ex2]
+          outside = ~((xx >= x1) & (xx < x2) & (yy >= y1) & (yy < y2))
+          # Prefer a frame close to the patch and thin it for a stable fit.
+          frame = outside & (
+              (xx < x1) | (xx >= x2) | (yy >= y2)
+          )
+          sample = frame & (((xx + yy) % max(1, int(3*sx))) == 0)
+          xs = xx[sample].astype(np.float64)
+          ys = yy[sample].astype(np.float64)
+          if xs.size < 50:
+              raise SystemExit("Not enough pixels to reconstruct CTA background")
+
+          xn = (xs - (x1+x2)/2) / max(1.0, (x2-x1)/2)
+          yn = (ys - (y1+y2)/2) / max(1.0, (y2-y1)/2)
+          A = np.column_stack([
+              np.ones_like(xn), xn, yn, xn*yn, xn*xn, yn*yn
+          ])
+
+          fy, fx = np.mgrid[y1:y2, x1:x2]
+          fxn = (fx.astype(np.float64) - (x1+x2)/2) / max(1.0, (x2-x1)/2)
+          fyn = (fy.astype(np.float64) - (y1+y2)/2) / max(1.0, (y2-y1)/2)
+          F = np.stack([
+              np.ones_like(fxn), fxn, fyn, fxn*fyn, fxn*fxn, fyn*fyn
+          ], axis=-1)
+
+          replacement = np.zeros((y2-y1, x2-x1, 3), dtype=np.float64)
+          for ch in range(3):
+              vals = src[ey1:ey2, ex1:ex2, ch][sample]
+              coeff, *_ = np.linalg.lstsq(A, vals.astype(np.float64), rcond=None)
+              replacement[..., ch] = np.tensordot(F, coeff, axes=([-1],[0]))
+          replacement = np.clip(replacement, 0, 255).astype(np.uint8)
+          replacement = cv2.GaussianBlur(replacement, (0,0), 2.2, 2.2)
+
+          ph, pw = replacement.shape[:2]
+          yy2, xx2 = np.mgrid[0:ph, 0:pw]
+          edge = np.minimum.reduce([
+              xx2.astype(np.float32),
+              (pw-1-xx2).astype(np.float32),
+              yy2.astype(np.float32) + 18.0,   # full coverage at the top image edge
+              (ph-1-yy2).astype(np.float32)
+          ])
+          feather = max(8.0, 15.0*sx)
+          alpha = np.clip(edge/feather, 0, 1)[...,None]
+          alpha[:max(1,int(8*sy)),:,:] = 1.0
+          patch = out[y1:y2, x1:x2].astype(np.float32)
+          out[y1:y2, x1:x2] = (patch*(1-alpha) + replacement.astype(np.float32)*alpha).astype(np.uint8)
+
+          # 2) Remove the light/stat panel in the lower-left of the hero.
+          # Rebuild the hidden scene by interpolating each column between clean
+          # pixels immediately above and below the old panel.
+          bx1, by1, bx2, by2 = scaled_rect((46, 710, 1000, 806))
+          ref = max(8, int(14*sy))
+          top_rows = src[max(0,by1-ref):by1, bx1:bx2].astype(np.float32)
+          bot_rows = src[by2:min(h,by2+ref), bx1:bx2].astype(np.float32)
+          if top_rows.size == 0 or bot_rows.size == 0:
+              raise SystemExit("Could not sample hero around lower-left panel")
+          top = top_rows.mean(axis=0)
+          bottom = bot_rows.mean(axis=0)
+
+          bh, bw = by2-by1, bx2-bx1
+          t = np.linspace(0.0, 1.0, bh, dtype=np.float32)[:,None,None]
+          fill = top[None,:,:]*(1.0-t) + bottom[None,:,:]*t
+          fill = cv2.GaussianBlur(np.clip(fill,0,255).astype(np.uint8), (0,0), 1.2, 1.0)
+
+          yy3, xx3 = np.mgrid[0:bh, 0:bw]
+          edge2 = np.minimum.reduce([
+              xx3.astype(np.float32),
+              (bw-1-xx3).astype(np.float32),
+              yy3.astype(np.float32),
+              (bh-1-yy3).astype(np.float32)
+          ])
+          feather2 = max(6.0, 10.0*sy)
+          alpha2 = np.clip(edge2/feather2, 0, 1)[...,None]
+          original_patch = out[by1:by2, bx1:bx2].astype(np.float32)
+          out[by1:by2, bx1:bx2] = (
+              original_patch*(1-alpha2) + fill.astype(np.float32)*alpha2
+          ).astype(np.uint8)
 
           ok = cv2.imwrite(
               "assets/hero-defense-2028.webp",
               out,
-              [cv2.IMWRITE_WEBP_QUALITY, 96]
+              [cv2.IMWRITE_WEBP_QUALITY, 97]
           )
           if not ok:
               raise SystemExit("Could not write edited hero image")
           PY
 
-      - name: Commit edited hero
+      - name: Commit cleaned hero
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -79,6 +150,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No image changes to commit"
           else
-            git commit -m "Cleanly remove homepage stats strip text"
+            git commit -m "Remove recruit CTA and repair homepage hero"
             git push
           fi
