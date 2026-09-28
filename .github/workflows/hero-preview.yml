@@ -6,13 +6,15 @@ on:
       - '.github/workflows/hero-preview.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -21,29 +23,41 @@ jobs:
       - name: Install Pillow
         run: pip install pillow
 
-      - name: Print compact hero previews
+      - name: Create compact hero previews
         run: |
+          mkdir -p .github/tmp
           python - <<'PY'
           from PIL import Image
-          import base64, io
+          import base64, io, pathlib
 
           for path, label in [
-              ("assets/hero-defense-2028.webp", "CURRENT"),
-              ("assets/hero-no-brand.webp", "NOBRAND"),
-              ("assets/hero-concept.png.png", "CONCEPT"),
+              ("assets/hero-defense-2028.webp", "current"),
+              ("assets/hero-no-brand.webp", "nobrand"),
+              ("assets/hero-concept.png.png", "concept"),
           ]:
               try:
                   im = Image.open(path).convert("RGB")
               except Exception as e:
-                  print(f"{label}_ERROR={e}")
+                  pathlib.Path(f".github/tmp/{label}.txt").write_text(f"ERROR={e}\n")
                   continue
-              print(f"{label}_SIZE={im.size[0]}x{im.size[1]}")
               thumb = im.copy()
-              thumb.thumbnail((480, 320))
+              thumb.thumbnail((768, 512))
               buf = io.BytesIO()
-              thumb.save(buf, format="JPEG", quality=72, optimize=True)
-              data = base64.b64encode(buf.getvalue()).decode("ascii")
-              print(f"{label}_B64_BEGIN")
-              print(data)
-              print(f"{label}_B64_END")
+              thumb.save(buf, format="JPEG", quality=78, optimize=True)
+              b64 = base64.b64encode(buf.getvalue()).decode("ascii")
+              pathlib.Path(f".github/tmp/{label}.txt").write_text(
+                  f"SIZE={im.size[0]}x{im.size[1]}\nB64={b64}\n"
+              )
           PY
+
+      - name: Commit preview diagnostics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/tmp/*.txt
+          if git diff --cached --quiet; then
+            echo "No preview changes"
+          else
+            git commit -m "Publish hero preview diagnostics"
+            git push
+          fi
