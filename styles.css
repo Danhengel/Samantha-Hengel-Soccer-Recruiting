@@ -54,3 +54,5 @@
 .recruit-stats strong{font-size:27px}
 .contact-card{padding-left:54px}
 }
+
+.social-section{padding:50px max(24px,7vw) 80px;border-top:1px solid var(--line)}.social-section h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(38px,5vw,66px);font-weight:500;line-height:1.1;margin:0 0 14px}.social-section h2 em{color:var(--coral);font-weight:500}.social-section>p:not(.eyebrow){color:var(--muted);max-width:650px}.social-links{display:flex;flex-wrap:wrap;gap:10px 25px;margin-top:25px}.social-links a,.film-schedule a{display:inline-flex;align-items:center;min-height:44px;color:var(--coral);font-weight:700}.profile-schedule-link{margin-top:30px}.film-schedule{margin-top:25px}
