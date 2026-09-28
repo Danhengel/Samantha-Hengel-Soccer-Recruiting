@@ -41,9 +41,9 @@ jobs:
                   pathlib.Path(f".github/tmp/{label}.txt").write_text(f"ERROR={e}\n")
                   continue
               thumb = im.copy()
-              thumb.thumbnail((768, 512))
+              thumb.thumbnail((300, 200))
               buf = io.BytesIO()
-              thumb.save(buf, format="JPEG", quality=78, optimize=True)
+              thumb.save(buf, format="JPEG", quality=55, optimize=True)
               b64 = base64.b64encode(buf.getvalue()).decode("ascii")
               pathlib.Path(f".github/tmp/{label}.txt").write_text(
                   f"SIZE={im.size[0]}x{im.size[1]}\nB64={b64}\n"
@@ -58,6 +58,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No preview changes"
           else
-            git commit -m "Publish hero preview diagnostics"
+            git commit -m "Refresh compact hero previews"
             git push
           fi
