@@ -238,3 +238,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--peach);outline-offs
   .fixture.next{padding:24px 16px}
   .fixture-date strong{font-size:31px}
 }
+
+.schedule-source-note{margin:22px 0 0;color:var(--muted);font-size:10px;line-height:1.6}
+.contact-share{padding:0;border:0;background:transparent;color:var(--coral);font:700 12px var(--sans);cursor:pointer}
+.contact-share:hover{color:var(--ink)}
+@media(max-width:900px){.contact-share{min-height:44px}}
