@@ -215,3 +215,16 @@
 .editorial-image-grid{grid-template-columns:1fr;grid-template-rows:none}.editorial-image-grid .wide,.editorial-image-grid figure{height:300px}
 .reference-grid{grid-template-columns:1fr}
 }
+
+/* Simplified homepage: remove duplicate profile content and heavy footer */
+.home-page{padding-bottom:0}
+.home-page .concept-hero{margin-bottom:0}
+.home-min-footer{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:22px max(20px,4vw);border-top:1px solid var(--line);background:var(--cream);color:var(--muted);font-size:11px}
+.home-min-footer nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.home-min-footer a{font-size:11px;font-weight:700;color:var(--ink)}
+.home-min-footer a:hover,.home-min-footer a:focus-visible{color:var(--coral)}
+@media(max-width:900px){
+  .home-page .concept-hero{margin-top:0}
+  .home-min-footer{padding:20px;align-items:flex-start;flex-direction:column;gap:12px}
+  .home-min-footer nav{gap:16px}
+}
