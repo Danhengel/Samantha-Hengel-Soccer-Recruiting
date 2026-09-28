@@ -47,7 +47,7 @@ jobs:
           # while retaining the player's leg and the underlying scene.
           blurred = cv2.GaussianBlur(roi, (0, 0), 18, 18)
           cream = np.full_like(roi, (246, 241, 238))
-          frosted = cv2.addWeighted(blurred, 0.84, cream, 0.16, 0)
+          frosted = cv2.addWeighted(blurred, 0.42, cream, 0.58, 0)
 
           # Feather the panel edges for a natural transition.
           rh, rw = roi.shape[:2]
@@ -56,7 +56,7 @@ jobs:
           vy = np.clip(yy / max(1, int(6*sy)), 0, 1)
           vx = np.clip(xx / max(1, int(10*sx)), 0, 1)
           alpha = np.minimum(vy[:, None], vx[None, :])
-          alpha = (0.97 * alpha)[..., None]
+          alpha = (1.00 * alpha)[..., None]
 
           blended = (roi * (1-alpha) + frosted * alpha).astype(np.uint8)
           out = src.copy()
