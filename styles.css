@@ -228,3 +228,7 @@
   .home-min-footer{padding:20px;align-items:flex-start;flex-direction:column;gap:12px}
   .home-min-footer nav{gap:16px}
 }
+
+
+/* Hide embedded stat strip in homepage hero artwork */
+.home-page .concept-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:clamp(72px,5.8vw,110px);background:#fffaf6;z-index:4;pointer-events:none}
