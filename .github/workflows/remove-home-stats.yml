@@ -1,0 +1,88 @@
+name: Remove homepage stats text
+
+on:
+  push:
+    paths:
+      - '.github/workflows/remove-home-stats.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  edit-hero:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install image tools
+        run: pip install opencv-python-headless
+
+      - name: Remove stats text from hero artwork
+        run: |
+          python - <<'PY'
+          import cv2
+          import numpy as np
+
+          path = "assets/hero-defense-2028.webp"
+          img = cv2.imread(path, cv2.IMREAD_COLOR)
+          if img is None:
+              raise SystemExit("Could not read hero image")
+
+          h, w = img.shape[:2]
+          sx, sy = w / 1536.0, h / 1024.0
+          mask = np.zeros((h, w), dtype=np.uint8)
+
+          # Text areas in the embedded stats strip:
+          # #2 / Jersey, 5'10" / Height, DEF / Position, 3.25 / GPA,
+          # West Florida Flames / Club, Newsome HS / High School.
+          boxes = [
+              (88, 731, 150, 790),
+              (176, 731, 270, 790),
+              (292, 731, 385, 790),
+              (405, 731, 490, 790),
+              (505, 731, 748, 790),
+              (778, 731, 965, 790),
+          ]
+
+          gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+          for x1, y1, x2, y2 in boxes:
+              X1, Y1 = int(x1*sx), int(y1*sy)
+              X2, Y2 = int(x2*sx), int(y2*sy)
+              roi = gray[Y1:Y2, X1:X2]
+
+              # Select dark lettering while preserving the underlying photo.
+              local = np.zeros_like(roi, dtype=np.uint8)
+              local[roi < 155] = 255
+              kernel = np.ones((3,3), np.uint8)
+              local = cv2.dilate(local, kernel, iterations=1)
+              mask[Y1:Y2, X1:X2] = np.maximum(mask[Y1:Y2, X1:X2], local)
+
+          # Remove the thin dividers between the stat fields.
+          for x in [75, 164, 276, 395, 500]:
+              X = int(x*sx)
+              Y1, Y2 = int(735*sy), int(786*sy)
+              mask[Y1:Y2, max(0, X-2):min(w, X+3)] = 255
+
+          edited = cv2.inpaint(img, mask, 4, cv2.INPAINT_TELEA)
+
+          ok = cv2.imwrite(path, edited, [cv2.IMWRITE_WEBP_QUALITY, 96])
+          if not ok:
+              raise SystemExit("Could not write edited hero image")
+          PY
+
+      - name: Commit edited hero
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/hero-defense-2028.webp
+          if git diff --cached --quiet; then
+            echo "No image changes to commit"
+          else
+            git commit -m "Remove homepage stats text from hero artwork"
+            git push
+          fi
