@@ -1,4 +1,4 @@
-name: Hero preview diagnostic
+name: Hero preview diagnostic # refreshed after cleanup
 
 on:
   push:
