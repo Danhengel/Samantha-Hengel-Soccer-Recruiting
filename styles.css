@@ -51,3 +51,10 @@ body.home-mock{background:#03172a}
 /* Keep the full hairline visible in the background-free hero portrait. */
 @media(min-width:821px){.home-mock .mock-portrait img{width:min(60vw,850px);right:-4%;top:0}}
 @media(max-width:820px){.home-mock .mock-portrait img{top:0}}
+
+/* Frame the uploaded match photo in the left hero panel. */
+@media(min-width:821px){
+.home-mock .mock-action{inset:0 32% 0 0}
+.home-mock .mock-action img{object-position:65% 45%;opacity:1;filter:saturate(.78) contrast(1.04) brightness(.88)}
+.home-mock .mock-action:after{background:linear-gradient(90deg,rgba(3,23,42,.62),rgba(3,23,42,.27) 52%,rgba(3,23,42,.22) 78%,#061f36 100%),linear-gradient(0deg,rgba(3,23,42,.48),transparent 55%)}
+}
