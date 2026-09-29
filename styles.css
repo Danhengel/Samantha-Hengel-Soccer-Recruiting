@@ -284,3 +284,33 @@ body>main,body>footer{z-index:1}
   body::after{inset:110px 0 0;font-size:clamp(210px,72vw,390px);transform:translateX(-3%)}
 }
 @media(prefers-reduced-motion:reduce){body::after{position:absolute}}
+
+
+/* Hero imagery — deeper crossover with soft editorial edges */
+@media(min-width:821px){
+  .home-mock .mock-action{inset:0 25% 0 0}
+  .home-mock .mock-portrait{width:74%;right:-2%;overflow:visible}
+  .home-mock .mock-portrait img{
+    right:-2%;width:min(64vw,920px);
+    filter:drop-shadow(-22px 14px 38px rgba(3,23,42,.22));
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.28) 8%,#000 22%,#000 88%,rgba(0,0,0,.45) 96%,transparent 100%),linear-gradient(0deg,transparent 0%,#000 12%,#000 92%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.28) 8%,#000 22%,#000 88%,rgba(0,0,0,.45) 96%,transparent 100%),linear-gradient(0deg,transparent 0%,#000 12%,#000 92%,transparent 100%);
+    -webkit-mask-composite:source-in;mask-composite:intersect;
+  }
+  .home-mock .mock-action:after{
+    background:linear-gradient(90deg,rgba(3,23,42,.58) 0%,rgba(3,23,42,.22) 48%,rgba(3,23,42,.10) 68%,rgba(6,31,54,.72) 96%,#061f36 100%),linear-gradient(0deg,rgba(3,23,42,.46),transparent 58%)
+  }
+  .intro-photo,.recruit-photo-hero figure,.academic-action-photo{overflow:visible}
+  .intro-photo img,.recruit-photo-hero img,.academic-action-photo img{
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 10%,#000 90%,transparent 100%),linear-gradient(0deg,transparent 0%,#000 8%,#000 94%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0%,#000 10%,#000 90%,transparent 100%),linear-gradient(0deg,transparent 0%,#000 8%,#000 94%,transparent 100%);
+    -webkit-mask-composite:source-in;mask-composite:intersect;
+  }
+}
+@media(max-width:820px){
+  .home-mock .mock-portrait{width:108%;right:-8%}
+  .home-mock .mock-portrait img{
+    -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);
+  }
+}
