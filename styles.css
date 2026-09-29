@@ -409,3 +409,35 @@ body.home-page .mock-action:after{display:none!important}
   .home-mock .mock-nav{display:block}
   .home-mock .mock-nav nav{display:flex;justify-content:center}
 }
+
+
+/* Screenshot fix: desktop homepage nav centered in viewport, socials pinned right */
+@media(min-width:821px){
+  .home-mock .mock-nav{
+    position:relative!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding-left:4.25vw!important;
+    padding-right:4.25vw!important;
+  }
+  .home-mock .mock-nav nav{
+    position:absolute!important;
+    left:50%!important;
+    top:0!important;
+    height:100%!important;
+    transform:translateX(-50%)!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:35px!important;
+    width:max-content!important;
+  }
+  .home-mock .mock-social{
+    position:absolute!important;
+    right:4.25vw!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    display:flex!important;
+  }
+}
