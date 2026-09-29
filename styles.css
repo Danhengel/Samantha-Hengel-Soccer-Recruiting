@@ -215,3 +215,11 @@ body.home-mock{background:#03172a}
 .header-socials a,.mock-social a{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;padding:0 8px;border:1px solid rgba(243,238,230,.28);font:700 9px/1 var(--sans);letter-spacing:.11em;color:var(--pearl);text-decoration:none;transition:.2s ease}
 .header-socials a:hover,.mock-social a:hover{background:var(--pearl);color:var(--navy)}
 @media(max-width:900px){.header-socials{gap:5px}.header-socials a{min-width:30px;padding:0 6px;font-size:8px}}
+
+/* Branded social icon treatment */
+.header-socials a,.mock-social a{width:34px;min-width:34px;height:34px;padding:0;border:0;border-radius:50%;background:rgba(243,238,230,.07)}
+.header-socials svg,.mock-social svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.65}
+.header-socials svg path:first-child,.mock-social svg path:first-child{fill:none}
+.header-socials .social-fill,.mock-social .social-fill{fill:currentColor;stroke:none}
+.header-socials .veo-icon,.mock-social .veo-icon{width:42px;border-radius:17px}
+.header-socials .veo-icon span,.mock-social .veo-icon span{font:700 11px/1 var(--sans);letter-spacing:-.04em;text-transform:lowercase}
