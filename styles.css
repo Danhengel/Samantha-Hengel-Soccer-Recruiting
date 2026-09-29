@@ -388,3 +388,24 @@ body.home-page .mock-portrait::after{
   background-image:none!important;
 }
 body.home-page .mock-action:after{display:none!important}
+
+
+/* Homepage nav: keep page buttons truly centered after logo removal */
+.home-mock .mock-nav{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+}
+.home-mock .mock-nav nav{
+  grid-column:2;
+  justify-self:center;
+  justify-content:center;
+}
+.home-mock .mock-social{
+  grid-column:3;
+  justify-self:end;
+}
+@media(max-width:820px){
+  .home-mock .mock-nav{display:block}
+  .home-mock .mock-nav nav{display:flex;justify-content:center}
+}
