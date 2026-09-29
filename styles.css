@@ -498,3 +498,30 @@ body.editorial-home{overflow:hidden;background:#f2eadf;color:#061d33}
 .editorial-cards{position:absolute;z-index:8;left:3vw;bottom:2.5%;display:grid;grid-template-columns:repeat(3,240px);gap:12px}.editorial-cards a{height:130px;position:relative;overflow:hidden;border:1px solid rgba(210,181,145,.82);background:#08223b}.editorial-cards img{width:100%;height:100%;object-fit:cover;filter:saturate(.75) brightness(.72);transition:.35s}.editorial-cards a:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,23,42,.9),transparent 66%)}.editorial-cards span{position:absolute;z-index:2;left:16px;bottom:13px;color:#fff;font:700 9px/1 'Manrope',sans-serif;letter-spacing:.17em}.editorial-cards a:hover img{transform:scale(1.04);filter:saturate(.9) brightness(.82)}
 @media(max-width:1000px){body.editorial-home{overflow:auto}.editorial-stage{height:calc(100vh - 100px);min-height:760px}.editorial-home .mock-nav{height:auto!important}.editorial-portrait{width:78%;right:-18%;opacity:.88}.editorial-copy{width:62%;left:24px;top:5%}.editorial-copy h1{height:220px}.editorial-cards{grid-template-columns:repeat(3,1fr);left:22px;right:22px}.editorial-cards a{height:115px}.profile-facts{margin-top:22px}}
 @media(max-width:620px){.editorial-stage{min-height:820px}.editorial-portrait{width:112%;right:-44%;opacity:.66}.editorial-wash{background:linear-gradient(90deg,rgba(249,243,234,.98),rgba(249,243,234,.75) 60%,rgba(249,243,234,.12)),linear-gradient(0deg,#031d33 0%,rgba(3,29,51,.78) 23%,transparent 58%)}.editorial-copy{width:88%}.editorial-copy h1{height:180px}.script-name{font-size:76px}.surname{top:76px;font-size:78px}.profile-facts{margin-top:20px}.editorial-cards{grid-template-columns:1fr;bottom:18px}.editorial-cards a{height:72px}.editorial-cards a:nth-child(2),.editorial-cards a:nth-child(3){display:none}}
+
+/* Exact reference composition pass — preserve Samantha's real right portrait */
+@media(min-width:1001px){
+ body.editorial-home{background:#f6efe5!important}
+ .editorial-home .mock-nav{height:59px!important;padding:0 3.2vw!important;background:#f8f1e7!important}
+ .editorial-home .mock-nav nav{left:47.5%!important;gap:39px!important}
+ .editorial-home .mock-social{right:2.8vw!important}
+ .editorial-stage{height:calc(100vh - 59px)!important;min-height:650px!important;background:#efe5d9!important}
+ .editorial-action{inset:0!important}
+ .editorial-action img{opacity:.52!important;object-position:47% 49%!important;filter:saturate(.58) contrast(.88) brightness(1.12)!important}
+ .editorial-wash{background:
+ linear-gradient(90deg,rgba(249,244,236,.99) 0%,rgba(249,244,236,.94) 20%,rgba(249,244,236,.66) 39%,rgba(249,244,236,.22) 57%,rgba(249,244,236,.03) 76%),
+ linear-gradient(0deg,rgba(4,31,54,.98) 0%,rgba(4,31,54,.78) 17%,rgba(4,31,54,.24) 34%,transparent 57%)!important}
+ .editorial-portrait{right:-2%!important;bottom:0!important;width:56%!important;height:100%!important}
+ .editorial-portrait img{bottom:0!important;top:auto!important;right:0!important;left:auto!important;width:min(56vw,900px)!important;max-height:98%!important;opacity:1!important}
+ .editorial-copy{left:4.05vw!important;top:3.2%!important;width:43%!important}
+ .editorial-copy h1{height:246px!important}
+ .script-name{left:1.8%!important;top:1px!important;font-size:clamp(82px,9.3vw,148px)!important;color:#a5825d!important}
+ .surname{left:0!important;top:99px!important;font-size:clamp(86px,9.15vw,145px)!important;color:#061d33!important}
+ .class-year{margin-top:-2px!important;font-size:15px!important;letter-spacing:.43em!important}
+ .gold-rule{margin:24px 0 18px!important}
+ .primary-stats{gap:27px!important}
+ .jersey{font-size:69px!important}
+ .profile-facts{margin-top:25px!important;gap:14px!important}
+ .editorial-cards{left:3.05vw!important;bottom:2.6%!important;grid-template-columns:repeat(3,240px)!important;gap:12px!important}
+ .editorial-cards a{height:132px!important}
+}
