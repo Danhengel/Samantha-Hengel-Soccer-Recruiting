@@ -85,3 +85,15 @@ body.home-mock{background:#03172a}
 .schedule-hero .type-hero-number{display:none}
 .schedule-layout{grid-template-columns:minmax(0,1fr);gap:0;padding-top:clamp(24px,3vw,44px)}
 @media(max-width:980px){.schedule-layout{grid-template-columns:minmax(0,1fr);gap:0;padding:26px 20px 82px}.schedule-hero{padding:38px 20px 32px}}
+
+/* Place the player overview beside the profile portrait. */
+.page-intro.profile-feature{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center;gap:clamp(30px,5vw,82px);padding-top:clamp(28px,4vw,58px);padding-bottom:clamp(24px,3vw,44px)}
+.profile-feature .intro-photo{height:min(68vh,650px)}
+.profile-overview{min-width:0}
+.profile-overview h1{margin:0;font:500 clamp(46px,4.7vw,76px)/.9 var(--serif);letter-spacing:-.045em}
+.profile-overview h1 em{color:transparent;-webkit-text-stroke:1px var(--pearl);font-weight:500}
+.profile-overview>p:not(.kicker){max-width:650px;margin:22px 0 26px;color:rgba(243,238,230,.7);font-size:14px;line-height:1.8}
+.profile-overview .traits>div{padding:14px 0}
+.profile-overview .actions{margin-top:22px}
+@media(max-width:980px){.page-intro.profile-feature{grid-template-columns:minmax(0,1fr);gap:28px;padding:26px 20px 46px}.profile-feature .intro-photo{height:min(92vw,520px)}.profile-overview h1{font-size:clamp(42px,8vw,66px)}}
+@media(max-width:560px){.profile-feature .intro-photo{height:min(84vw,390px)}.profile-overview .traits>div{grid-template-columns:38px 1fr}.profile-overview h1{font-size:clamp(42px,11vw,56px)}}
