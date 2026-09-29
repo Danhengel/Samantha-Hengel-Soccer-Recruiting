@@ -557,3 +557,30 @@ body.editorial-home{overflow:hidden;background:#f2eadf;color:#061d33}
  .editorial-cards a{height:100px!important}
  .editorial-cards span{left:11px!important;bottom:10px!important;font-size:6px!important;letter-spacing:.14em!important}
 }
+
+/* Right portrait: match reference scale, crop and edge placement */
+@media(min-width:1001px){
+ .editorial-portrait{
+   right:-2.8%!important;
+   bottom:0!important;
+   width:48.5%!important;
+   height:100%!important;
+   overflow:visible!important;
+   align-items:flex-end!important;
+ }
+ .editorial-portrait img{
+   position:absolute!important;
+   right:0!important;
+   left:auto!important;
+   top:auto!important;
+   bottom:-1.2%!important;
+   width:min(48vw,735px)!important;
+   height:auto!important;
+   max-height:98.5%!important;
+   object-fit:contain!important;
+   object-position:right bottom!important;
+   filter:drop-shadow(-12px 8px 24px rgba(3,23,42,.10)) saturate(.88) contrast(.98) brightness(1.04)!important;
+   -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.42) 7%,rgba(0,0,0,.88) 17%,#000 27%,#000 100%)!important;
+   mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.42) 7%,rgba(0,0,0,.88) 17%,#000 27%,#000 100%)!important;
+ }
+}
