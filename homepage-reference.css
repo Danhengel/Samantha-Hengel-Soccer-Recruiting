@@ -58,3 +58,31 @@ html,body{margin:0;width:100%;height:100%;overflow:hidden}body.ref-home{box-sizi
  .ref-card{height:99px!important;border-color:rgba(204,176,142,.85)!important}
  .ref-card span{left:10px!important;bottom:9px!important;font-size:6px!important;letter-spacing:.14em!important}
 }
+
+/* REFERENCE21 — measured directly from supplied 1002x663 screenshot */
+@media(min-width:901px){
+ body.ref-home{padding:31px 32px 16px 46px!important;background:#f7f7f7!important}
+ .ref-shell{height:calc(100vh - 47px)!important;border-radius:18px!important}
+ .ref-nav{height:36px!important;background:rgba(250,246,239,.74)!important}
+ .ref-nav nav{gap:29px!important;transform:translateX(-18px)!important}
+ .ref-copy{left:3.95%!important;top:8.3%!important;width:40%!important}
+ .ref-title{height:169px!important}
+ .ref-first{left:1.5%!important;top:0!important;font-size:clamp(78px,7.8vw,118px)!important;line-height:.75!important}
+ .ref-last{top:80px!important;font-size:clamp(78px,7.7vw,118px)!important;line-height:.70!important}
+ .ref-class{font-size:11px!important;letter-spacing:.48em!important}
+ .ref-gold{width:22px!important;margin:13px 0 11px!important}
+ .ref-stats{gap:17px!important}
+ .ref-num{font-size:49px!important}
+ .ref-vrule{height:62px!important}
+ .ref-facts{margin-top:16px!important;gap:12px!important}
+ .ref-bg{left:21%!important;right:30%!important;top:20%!important;bottom:17%!important}
+ .ref-bg img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center bottom!important;opacity:.78!important;filter:saturate(.70) contrast(.94) brightness(1.02)!important}
+ .ref-bg:after{display:none!important}
+ .ref-shell:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:
+ linear-gradient(90deg,rgba(249,244,236,.96) 0%,rgba(249,244,236,.80) 18%,rgba(249,244,236,.32) 35%,rgba(249,244,236,.04) 55%,transparent 72%),
+ linear-gradient(0deg,#061d33 0%,rgba(6,29,51,.96) 13%,rgba(6,29,51,.68) 25%,rgba(6,29,51,.22) 39%,transparent 57%)}
+ .ref-right{z-index:3!important;right:-.4%!important;bottom:0!important;width:44.5%!important;height:95%!important}
+ .ref-right img{width:min(44.5vw,700px)!important;max-height:100%!important;filter:none!important;mask-image:none!important;-webkit-mask-image:none!important}
+ .ref-cards{left:3.05%!important;bottom:3.35%!important;grid-template-columns:145px 145px 145px!important;gap:8px!important}
+ .ref-card{height:99px!important}
+}
