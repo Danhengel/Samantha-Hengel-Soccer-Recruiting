@@ -47,3 +47,7 @@ body.home-mock{background:#03172a}
 
 /* Reset the old two-layer mask, which hides a transparent cutout. */
 .home-mock .mock-portrait img{-webkit-mask-composite:source-over;mask-composite:add}
+
+/* Keep the full hairline visible in the background-free hero portrait. */
+@media(min-width:821px){.home-mock .mock-portrait img{width:min(60vw,850px);right:-4%;top:0}}
+@media(max-width:820px){.home-mock .mock-portrait img{top:0}}
