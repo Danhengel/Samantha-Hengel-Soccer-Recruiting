@@ -194,3 +194,18 @@ body.home-mock{background:#03172a}
   .recruit-photo-hero{grid-template-columns:1fr;padding:48px var(--pad)}
   .recruit-photo-hero figure{height:42vh;min-height:300px}
 }
+
+/* Film evaluation directly beneath film links */
+.film-inline-evaluation{margin-top:26px;padding-top:18px;border-top:1px solid var(--line)}
+.film-inline-evaluation h2{margin:7px 0 12px;font-size:clamp(28px,2.6vw,42px);line-height:.88}
+.film-inline-evaluation .evaluation-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
+.film-inline-evaluation .evaluation-list div{padding:7px 0}
+.film-inline-evaluation .evaluation-list strong{font-size:clamp(11px,.9vw,15px)}
+@media (min-width:901px){
+ .film-page main{display:block;height:calc(100vh - 68px)}
+ .film-page .film-hero{height:100%;min-height:0}
+ .film-page .film-hero-copy{overflow:hidden}
+}
+@media (max-width:900px){
+ .film-inline-evaluation .evaluation-list{grid-template-columns:1fr}
+}
