@@ -356,3 +356,22 @@ body.home-mock .mock-home::after{
   background:none!important;
   background-image:none!important;
 }
+
+
+/* Hard reset: no SH/SH2 decorative marks anywhere on homepage */
+.home-mock .mock-logo,
+.home-mock .mock-logo-spacer,
+.home-mock [class*="monogram"],
+.home-mock .mock-home::before,
+.home-mock .mock-home::after,
+.home-mock .mock-hero::before,
+.home-mock .mock-hero::after,
+.home-mock main::before,
+.home-mock main::after,
+body.home-mock::before,
+body.home-mock::after{
+  display:none!important;
+  content:none!important;
+  background-image:none!important;
+}
+.home-mock .mock-nav{grid-template-columns:170px 1fr 170px}
