@@ -375,3 +375,16 @@ body.home-mock::after{
   background-image:none!important;
 }
 .home-mock .mock-nav{grid-template-columns:170px 1fr 170px}
+
+
+/* Screenshot-targeted fix: remove translucent SH2 overlay from homepage hero */
+body.home-page .mock-hero::before,
+body.home-page .mock-hero::after,
+body.home-page .mock-action::before,
+body.home-page .mock-action::after,
+body.home-page .mock-portrait::before,
+body.home-page .mock-portrait::after{
+  content:none!important;
+  background-image:none!important;
+}
+body.home-page .mock-action:after{display:none!important}
