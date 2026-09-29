@@ -68,3 +68,6 @@ body.home-mock{background:#03172a}
   .home-mock .mock-tiles{flex:none;height:clamp(140px,20vh,190px)}
   .home-mock .mock-recruit{flex:none;min-height:clamp(72px,10vh,100px)}
 }
+
+/* Keep the distinct profile game photo clear and natural. */
+.page-intro .intro-photo img{filter:saturate(.85) brightness(.88)}
