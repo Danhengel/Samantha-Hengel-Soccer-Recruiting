@@ -223,3 +223,37 @@ body.home-mock{background:#03172a}
 .header-socials .social-fill,.mock-social .social-fill{fill:currentColor;stroke:none}
 .header-socials .veo-icon,.mock-social .veo-icon{width:42px;border-radius:17px}
 .header-socials .veo-icon span,.mock-social .veo-icon span{font:700 11px/1 var(--sans);letter-spacing:-.04em;text-transform:lowercase}
+
+/* Premium atmospheric navy background */
+body{
+  background-color:var(--navy-deep);
+  background-image:
+    radial-gradient(circle at 12% 18%,rgba(202,216,226,.105) 0,rgba(202,216,226,.035) 18%,transparent 38%),
+    radial-gradient(circle at 88% 62%,rgba(243,238,230,.075) 0,rgba(243,238,230,.018) 22%,transparent 44%),
+    linear-gradient(128deg,transparent 0 46%,rgba(255,255,255,.018) 46.2% 46.7%,transparent 46.9% 100%);
+  background-attachment:fixed;
+}
+body:before{
+  content:"SH";
+  position:fixed;
+  right:-.04em;
+  bottom:-.22em;
+  z-index:0;
+  pointer-events:none;
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(260px,34vw,620px);
+  font-weight:600;
+  line-height:.8;
+  letter-spacing:-.09em;
+  color:rgba(243,238,230,.022);
+}
+body>header,body>main,body>footer{position:relative;z-index:1}
+.site-header,.mock-nav{background:rgba(3,21,37,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+/* Let the atmospheric base show through navy content areas */
+.film-page .film-hero,
+.academics-page .academic-photo-hero,
+.recruit-photo-hero{background-color:rgba(6,29,51,.72)}
+@media(max-width:900px){
+  body{background-attachment:scroll}
+  body:before{font-size:72vw;opacity:.7}
+}
