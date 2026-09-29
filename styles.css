@@ -180,3 +180,7 @@ body.home-mock{background:#03172a}
   .academics-page .academic-hero-meta small{font-size:12px}
   .academics-page .academic-hero-meta strong{font-size:42px}
 }
+
+/* Recruit page: collapse removed hero media column */
+.recruit-hero:not(:has(figure)){grid-template-columns:1fr}
+.recruit-hero:not(:has(figure))>div{max-width:900px}
