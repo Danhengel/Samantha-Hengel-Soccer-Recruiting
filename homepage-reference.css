@@ -77,7 +77,7 @@ body.ref-home{
 }
 
 .ref-copy{position:absolute;z-index:8;left:4.05%;top:7.8%;width:40.5%}
-.ref-title{height:27.3cqw;max-height:27.3cqw;position:relative;margin:0}
+.ref-title{height:18.3cqw;max-height:18.3cqw;position:relative;margin:0}
 .ref-first{
   position:absolute;left:1.5%;top:0;color:#9e7b57;font-family:Allura,cursive;
   font-size:12.4cqw;font-weight:400;line-height:.75;transform:rotate(-5deg);white-space:nowrap;
@@ -124,13 +124,13 @@ body.ref-home{
 .ref-card-fill.academics-card{
   background:
     linear-gradient(rgba(7,29,51,.22),rgba(7,29,51,.56)),
-    url("IMG_0243.JPG");
+    url("assets/IMG_0243.JPG");
   background-size:cover;background-position:center;
 }
 .ref-card-fill.contact-card{
   background:
     linear-gradient(rgba(7,29,51,.18),rgba(7,29,51,.60)),
-    url("IMG_0313.JPG");
+    url("assets/IMG_0313.JPG");
   background-size:cover;background-position:center;
 }
 .ref-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,23,42,.92),transparent 68%)}
