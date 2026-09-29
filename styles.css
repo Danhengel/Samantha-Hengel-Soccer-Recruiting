@@ -69,10 +69,14 @@ body.home-mock{background:#03172a}
   .home-mock .mock-recruit{flex:none;min-height:clamp(72px,10vh,100px)}
 }
 
-/* Center Samantha’s face and let her portrait blend into the navy hero. */
-.page-intro .intro-photo{display:flex;align-items:flex-start;justify-content:center;background:var(--navy)}
-.page-intro .intro-photo img{flex:none;width:auto;max-width:none;height:115%;object-fit:contain;filter:none;transform:translateY(14%)}
-@media(max-width:980px){.page-intro .intro-photo{height:min(85vw,560px)}.page-intro .intro-photo img{height:120%;transform:translateY(10%)}}
+/* Keep the profile portrait close to the copy, with the face centered in its space. */
+.page-intro.split-intro{grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(24px,4vw,64px);padding-top:clamp(38px,5vw,72px);padding-bottom:0}
+.page-intro .intro-copy{min-width:0}
+.page-intro .intro-copy h1{font-size:clamp(58px,6.4vw,96px)}
+.page-intro .intro-photo{display:flex;align-items:flex-start;justify-content:center;height:min(60vh,560px);background:var(--navy)}
+.page-intro .intro-photo img{flex:none;width:auto;max-width:none;height:112%;object-fit:contain;filter:none;transform:translateY(7%)}
+@media(max-width:980px){.page-intro.split-intro{grid-template-columns:minmax(0,1fr);gap:16px;padding:40px 20px 0}.page-intro .intro-photo{height:min(78vw,470px)}.page-intro .intro-photo img{height:124%;transform:translateY(6%)}}
+@media(max-width:560px){.page-intro .intro-copy h1{font-size:clamp(52px,14vw,68px)}}
 
 /* Put the live schedule immediately below a compact page heading. */
 .schedule-hero{min-height:0;padding:clamp(36px,4vw,64px) var(--pad) clamp(30px,3vw,48px)}
