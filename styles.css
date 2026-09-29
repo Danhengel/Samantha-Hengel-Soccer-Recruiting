@@ -342,3 +342,17 @@ body::after{
 
 /* Restore clean non-logo atmospheric background */
 body::before,body::after{content:none!important;display:none!important;background:none!important}
+
+
+/* Homepage: explicitly remove all decorative logo/watermark backgrounds */
+body.home-mock::before,
+body.home-mock::after,
+body.home-mock main::before,
+body.home-mock main::after,
+body.home-mock .mock-home::before,
+body.home-mock .mock-home::after{
+  content:none!important;
+  display:none!important;
+  background:none!important;
+  background-image:none!important;
+}
