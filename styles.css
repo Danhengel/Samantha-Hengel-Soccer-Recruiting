@@ -441,3 +441,7 @@ body.home-page .mock-action:after{display:none!important}
     display:flex!important;
   }
 }
+
+/* Homepage left action hero: softened/translucent */
+body.home-page.home-mock .mock-action img{opacity:.58!important;filter:saturate(.70) contrast(1.02) brightness(.82)!important}
+body.home-page.home-mock .mock-action{background:#061f36}
