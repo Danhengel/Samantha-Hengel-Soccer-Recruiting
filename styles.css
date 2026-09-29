@@ -338,3 +338,7 @@ body::after{
     background-position:center top;
   }
 }
+
+
+/* Restore clean non-logo atmospheric background */
+body::before,body::after{content:none!important;display:none!important;background:none!important}
