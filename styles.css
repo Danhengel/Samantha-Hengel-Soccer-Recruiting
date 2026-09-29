@@ -584,3 +584,38 @@ body.editorial-home{overflow:hidden;background:#f2eadf;color:#061d33}
    mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.42) 7%,rgba(0,0,0,.88) 17%,#000 27%,#000 100%)!important;
  }
 }
+
+/* Final screenshot-reference calibration */
+@media(min-width:1001px){
+ body.editorial-home{padding:26px 34px 0!important;background:#f4f4f4!important}
+ .editorial-stage{height:calc(100vh - 34px)!important;border-radius:18px!important;background:#efe5d9!important}
+ .editorial-home .mock-nav{top:26px!important;left:34px!important;right:14px!important;height:36px!important;background:rgba(249,244,236,.84)!important}
+ .editorial-home .mock-nav nav{left:50%!important;gap:31px!important}
+ .editorial-home .mock-social{right:17px!important}
+ .editorial-action img{opacity:.50!important;filter:saturate(.60) contrast(.90) brightness(1.10)!important;object-position:50% 49%!important}
+ .editorial-wash{background:
+   linear-gradient(90deg,rgba(250,245,237,.99) 0%,rgba(250,245,237,.94) 19%,rgba(250,245,237,.68) 38%,rgba(250,245,237,.25) 55%,rgba(250,245,237,.04) 72%),
+   linear-gradient(0deg,rgba(3,29,51,.99) 0%,rgba(3,29,51,.78) 18%,rgba(3,29,51,.28) 35%,transparent 58%)!important}
+ .editorial-copy{left:4.05%!important;top:7.2%!important;width:42%!important}
+ .editorial-copy h1{height:180px!important}
+ .script-name{left:1%!important;top:0!important;font-size:clamp(68px,7.1vw,110px)!important;color:#9e7a55!important}
+ .surname{left:0!important;top:73px!important;font-size:clamp(72px,7.25vw,112px)!important}
+ .class-year{font-size:11px!important;letter-spacing:.43em!important}
+ .gold-rule{width:28px!important;margin:15px 0 13px!important}
+ .jersey{font-size:49px!important}
+ .stat-rule{height:58px!important}
+ .primary-stats{gap:19px!important}
+ .primary-stats strong{font-size:13px!important}
+ .primary-stats span{font-size:8px!important;margin-top:6px!important}
+ .profile-facts{margin-top:20px!important;gap:11px!important}
+ .profile-facts>div{font-size:8px!important;gap:10px!important}
+ .profile-facts small{font-size:6px!important}
+ .fact-icon{width:24px!important;font-size:17px!important}
+ .editorial-portrait{right:-2.2%!important;bottom:0!important;width:50.5%!important;height:100%!important}
+ .editorial-portrait img{right:0!important;bottom:-1%!important;width:min(50vw,760px)!important;max-height:99%!important;filter:drop-shadow(-10px 7px 20px rgba(3,23,42,.08)) saturate(.90) contrast(.98) brightness(1.04)!important;
+ -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 5%,rgba(0,0,0,.78) 13%,#000 23%,#000 100%)!important;
+ mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 5%,rgba(0,0,0,.78) 13%,#000 23%,#000 100%)!important}
+ .editorial-cards{left:3.05%!important;bottom:3.8%!important;grid-template-columns:145px 145px 145px!important;gap:8px!important}
+ .editorial-cards a{height:100px!important}
+ .editorial-cards span{left:11px!important;bottom:10px!important;font-size:6px!important}
+}
