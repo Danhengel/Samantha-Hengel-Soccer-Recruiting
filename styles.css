@@ -525,3 +525,35 @@ body.editorial-home{overflow:hidden;background:#f2eadf;color:#061d33}
  .editorial-cards{left:3.05vw!important;bottom:2.6%!important;grid-template-columns:repeat(3,240px)!important;gap:12px!important}
  .editorial-cards a{height:132px!important}
 }
+
+/* Screenshot match: compact framed 3:2 editorial homepage */
+@media(min-width:1001px){
+ body.editorial-home{margin:0!important;padding:26px 34px 0!important;background:#f4f4f4!important;overflow:hidden!important;box-sizing:border-box!important}
+ .editorial-home .mock-nav{position:absolute!important;z-index:60!important;top:26px!important;left:34px!important;right:14px!important;width:auto!important;height:36px!important;padding:0 24px!important;background:rgba(249,244,236,.78)!important;border:0!important;border-radius:18px 18px 0 0!important;backdrop-filter:none!important}
+ .editorial-home .mock-nav nav{left:50%!important;gap:31px!important}
+ .editorial-home .mock-nav nav a{font-size:8px!important;letter-spacing:.20em!important;padding:0!important;height:36px!important;display:flex!important;align-items:center!important}
+ .editorial-home .mock-nav nav a.active:after{bottom:3px!important}
+ .editorial-home .mock-social{right:17px!important;gap:4px!important}
+ .editorial-home .mock-social a{width:26px!important;min-width:26px!important;height:26px!important}
+ .editorial-home .mock-social svg{width:15px!important;height:15px!important}
+ .editorial-stage{height:calc(100vh - 34px)!important;min-height:0!important;border-radius:18px!important;overflow:hidden!important;background:#eee4d7!important}
+ .editorial-action img{object-position:50% 48%!important;opacity:.53!important}
+ .editorial-portrait{right:-1.5%!important;width:49%!important;height:100%!important}
+ .editorial-portrait img{width:min(49vw,730px)!important;max-height:96%!important}
+ .editorial-copy{left:4.1%!important;top:7.5%!important;width:42%!important}
+ .editorial-copy h1{height:180px!important}
+ .script-name{left:1%!important;top:0!important;font-size:clamp(68px,7.1vw,110px)!important}
+ .surname{top:73px!important;font-size:clamp(72px,7.25vw,112px)!important}
+ .class-year{margin-top:0!important;font-size:11px!important;letter-spacing:.43em!important}
+ .gold-rule{width:28px!important;margin:15px 0 13px!important}
+ .primary-stats{gap:19px!important}
+ .jersey{font-size:49px!important}
+ .stat-rule{height:58px!important}
+ .primary-stats strong{font-size:13px!important}.primary-stats span{font-size:8px!important;margin-top:6px!important}
+ .profile-facts{margin-top:20px!important;gap:11px!important}
+ .profile-facts>div{font-size:8px!important;gap:10px!important}.profile-facts small{font-size:6px!important}
+ .fact-icon{width:24px!important;font-size:17px!important}
+ .editorial-cards{left:3.05%!important;bottom:3.8%!important;grid-template-columns:145px 145px 145px!important;gap:8px!important}
+ .editorial-cards a{height:100px!important}
+ .editorial-cards span{left:11px!important;bottom:10px!important;font-size:6px!important;letter-spacing:.14em!important}
+}
