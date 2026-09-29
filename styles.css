@@ -69,5 +69,6 @@ body.home-mock{background:#03172a}
   .home-mock .mock-recruit{flex:none;min-height:clamp(72px,10vh,100px)}
 }
 
-/* Keep the distinct profile game photo clear and natural. */
-.page-intro .intro-photo img{filter:saturate(.85) brightness(.88)}
+/* Keep the new profile portrait naturally lit and framed. */
+.page-intro .intro-photo img{filter:none;object-position:center 38%}
+@media(max-width:980px){.page-intro .intro-photo{height:min(85vw,560px)}.page-intro .intro-photo img{object-position:center 32%}}
