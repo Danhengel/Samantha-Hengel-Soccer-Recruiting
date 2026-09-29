@@ -475,3 +475,11 @@ body.home-page.home-mock .mock-action{background:#061f36}
       linear-gradient(0deg,rgba(3,23,42,.62) 0%,transparent 43%)!important;
   }
 }
+
+/* Homepage right portrait: anchor the image to the bottom edge of the hero */
+@media(min-width:821px){
+  body.home-page.home-mock .mock-portrait img{
+    top:auto!important;
+    bottom:0!important;
+  }
+}
