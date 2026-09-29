@@ -209,3 +209,9 @@ body.home-mock{background:#03172a}
 @media (max-width:900px){
  .film-inline-evaluation .evaluation-list{grid-template-columns:1fr}
 }
+
+/* Consistent top-right social navigation */
+.header-socials{display:flex;align-items:center;justify-content:flex-end;gap:8px}
+.header-socials a,.mock-social a{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;padding:0 8px;border:1px solid rgba(243,238,230,.28);font:700 9px/1 var(--sans);letter-spacing:.11em;color:var(--pearl);text-decoration:none;transition:.2s ease}
+.header-socials a:hover,.mock-social a:hover{background:var(--pearl);color:var(--navy)}
+@media(max-width:900px){.header-socials{gap:5px}.header-socials a{min-width:30px;padding:0 6px;font-size:8px}}
