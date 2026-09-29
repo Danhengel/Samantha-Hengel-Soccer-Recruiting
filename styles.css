@@ -58,3 +58,13 @@ body.home-mock{background:#03172a}
 .home-mock .mock-action img{object-position:65% 45%;opacity:1;filter:saturate(.78) contrast(1.04) brightness(.88)}
 .home-mock .mock-action:after{background:linear-gradient(90deg,rgba(3,23,42,.62),rgba(3,23,42,.27) 52%,rgba(3,23,42,.22) 78%,#061f36 100%),linear-gradient(0deg,rgba(3,23,42,.48),transparent 55%)}
 }
+
+/* Fit the desktop homepage within a single viewport. */
+@media(min-width:821px) and (min-height:700px){
+  .home-mock{height:100vh;height:100dvh;overflow:hidden;display:flex;flex-direction:column}
+  .home-mock .mock-nav{flex:none}
+  .home-mock .mock-home{flex:1;min-height:0;display:flex;flex-direction:column}
+  .home-mock .mock-hero{flex:1;min-height:0;height:auto}
+  .home-mock .mock-tiles{flex:none;height:clamp(140px,20vh,190px)}
+  .home-mock .mock-recruit{flex:none;min-height:clamp(72px,10vh,100px)}
+}
