@@ -742,3 +742,7 @@ body:not(.home-page) main{background:#f8f1e7!important}
 .film-page .film-hero-video{background:transparent!important;box-shadow:none!important;overflow:visible!important}
 .film-page .film-hero-video video{background:transparent!important}
 .film-page .film-hero-video>span{background:transparent!important;color:#526476!important;padding:10px 0 0!important}
+
+
+/* 2026-09-30 film page: remove remaining divider line */
+.film-page .film-inline-evaluation{border-top:none!important}
