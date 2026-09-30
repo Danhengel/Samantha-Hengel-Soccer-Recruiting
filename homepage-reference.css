@@ -209,3 +209,7 @@ body.ref-home{
 
 /* 2026-09-30 watch-film homepage card: dedicated match-film image */
 .ref-card:first-child>img{content:url("assets/IMG_0387.JPEG")!important;object-position:center 46%!important;filter:saturate(.82) brightness(.72) contrast(1.04)!important}
+
+
+/* 2026-09-30 watch-film card: unique image, separate from hero */
+.ref-card:first-child>img{content:url("assets/IMG_0243.JPG")!important;object-position:center 44%!important;filter:saturate(.82) brightness(.72) contrast(1.04)!important}
