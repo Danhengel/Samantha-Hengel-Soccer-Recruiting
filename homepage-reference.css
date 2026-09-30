@@ -205,3 +205,7 @@ body.ref-home{
 
 /* 2026-09-30 academics homepage card: use more relevant student-athlete image */
 .ref-card-fill.academics-card{background:linear-gradient(rgba(7,29,51,.10),rgba(7,29,51,.54)),url("assets/IMG_0384.jpg")!important;background-size:cover!important;background-position:center 38%!important}
+
+
+/* 2026-09-30 watch-film homepage card: dedicated match-film image */
+.ref-card:first-child>img{content:url("assets/IMG_0387.JPEG")!important;object-position:center 46%!important;filter:saturate(.82) brightness(.72) contrast(1.04)!important}
