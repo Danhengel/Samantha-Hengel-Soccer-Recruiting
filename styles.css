@@ -751,3 +751,9 @@ body:not(.home-page) main{background:#f8f1e7!important}
 /* 2026-09-30 film clip: remove all visible frame/border */
 .film-page .film-hero-video,.film-page .film-hero-video video{border:0!important;outline:0!important;box-shadow:none!important}
 .film-page .film-hero-video{padding:0!important;background:none!important}
+
+
+/* 2026-09-30 film page: carry the soft top fade through the full page */
+.film-page,.film-page main,.film-page .film-hero{background:linear-gradient(180deg,#faf5ed 0%,#f3e8da 24%,#eee0cf 52%,#f5ecdf 78%,#faf5ed 100%)!important}
+.film-page .film-hero{position:relative!important;isolation:isolate!important}
+.film-page .film-hero:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 52% 0%,rgba(255,255,255,.78) 0%,rgba(255,255,255,.34) 24%,transparent 58%),linear-gradient(90deg,rgba(255,255,255,.18),transparent 34%,rgba(225,203,176,.18) 100%)}
