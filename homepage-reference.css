@@ -155,3 +155,7 @@ body.ref-home{
   .ref-cards{left:22px;right:22px;bottom:17px;grid-template-columns:repeat(3,1fr);gap:8px}.ref-card{height:82px}
   .ref-card-icon{left:10px;bottom:9px;font-size:9px}.ref-card-label{left:28px;bottom:9px;font-size:6px}
 }
+
+/* 2026-09-30 premium recruiting polish */
+.ref-nav nav .recruit-nav{padding:.72cqw 1.15cqw;border:1px solid rgba(7,29,51,.38);letter-spacing:.16em;transition:background .2s,color .2s,border-color .2s}.ref-nav nav .recruit-nav:hover{background:#071d33;color:#fff;border-color:#071d33}.ref-nav nav .recruit-nav:after{display:none}.ref-card:focus-visible,.ref-nav a:focus-visible,.ref-social a:focus-visible{outline:2px solid #9e7b57;outline-offset:3px}.ref-card:before{content:"";position:absolute;inset:0;z-index:1;border:1px solid transparent;transition:border-color .2s}.ref-card:hover:before{border-color:rgba(255,255,255,.34)}
+@media(max-width:900px){.ref-nav nav .recruit-nav{padding:7px 9px}.ref-shell{min-height:720px}.ref-right{right:-31%;width:96%}.ref-cards{bottom:18px}.ref-card-label{letter-spacing:.10em}}
