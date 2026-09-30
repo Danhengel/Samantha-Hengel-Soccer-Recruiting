@@ -197,3 +197,7 @@ body.ref-home{
 .ref-card:first-child>img{content:url("assets/IMG_8290.JPEG");object-position:center 42%;filter:saturate(.78) brightness(.76)!important}
 .ref-card-fill.academics-card{background:linear-gradient(rgba(7,29,51,.14),rgba(7,29,51,.52)),url("assets/samantha-profile-cutout-2028.webp")!important;background-size:cover!important;background-position:center 18%!important}
 .ref-card-fill.contact-card{background:linear-gradient(rgba(7,29,51,.14),rgba(7,29,51,.58)),url("assets/IMG_8281.JPEG")!important;background-size:cover!important;background-position:center 35%!important}
+
+
+/* 2026-09-30 recruit homepage card: use coach-facing action image */
+.ref-card-fill.contact-card{background:linear-gradient(rgba(7,29,51,.10),rgba(7,29,51,.56)),url("assets/recruit-action.jpg.jpg")!important;background-size:cover!important;background-position:center 38%!important}
