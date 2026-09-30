@@ -173,3 +173,8 @@ body.ref-home{
 
 /* 2026-09-30 final player-facts contrast override */
 .ref-copy .ref-facts,.ref-copy .ref-fact,.ref-copy .ref-fact span{color:#071d33!important;text-shadow:0 1px 0 rgba(255,255,255,.28)!important}.ref-copy .ref-fact b{color:#8a6847!important}.ref-copy .ref-fact small{color:#24394d!important}.ref-copy .ref-fact{font-weight:700!important}
+
+
+/* 2026-09-30 move kicking action photo below Samantha name */
+@media(min-width:901px){.ref-action-wrap{top:24%!important;height:63%!important}.ref-action{object-position:49% 58%!important}}
+@media(max-width:900px){.ref-action-wrap{top:36%!important;height:43%!important}.ref-action{object-position:49% 60%!important}}
