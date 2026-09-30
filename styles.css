@@ -746,3 +746,8 @@ body:not(.home-page) main{background:#f8f1e7!important}
 
 /* 2026-09-30 film page: remove remaining divider line */
 .film-page .film-inline-evaluation{border-top:none!important}
+
+
+/* 2026-09-30 film clip: remove all visible frame/border */
+.film-page .film-hero-video,.film-page .film-hero-video video{border:0!important;outline:0!important;box-shadow:none!important}
+.film-page .film-hero-video{padding:0!important;background:none!important}
