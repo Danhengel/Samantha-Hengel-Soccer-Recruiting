@@ -668,3 +668,13 @@ body:not(.home-page) main{width:min(1440px,calc(100% - 64px));margin:26px auto 0
 /* 2026-09-30 profile hero: match homepage pearl / navy / champagne palette */
 .profile-feature{background:linear-gradient(115deg,#faf4ea 0%,#efe4d6 62%,#e1cbb0 100%)!important;color:#071d33!important}
 .profile-feature .kicker{color:#9e7b57!important}.profile-feature h1{color:#071d33!important}.profile-feature h1 em{color:#9e7b57!important;-webkit-text-stroke:0!important}.profile-feature .profile-overview>p:not(.kicker){color:#4f6070!important}.profile-feature .traits{border-color:rgba(7,29,51,.14)!important}.profile-feature .traits>div{border-color:rgba(7,29,51,.14)!important}.profile-feature .traits dt{color:#9e7b57!important}.profile-feature .traits strong{color:#071d33!important}.profile-feature .traits span{color:#596879!important}.profile-feature .button{background:#071d33!important;color:#fff!important;border-color:#071d33!important}.profile-feature .text-link{color:#071d33!important}.profile-feature .intro-photo{background:radial-gradient(circle at 45% 42%,rgba(255,255,255,.5),transparent 58%)!important}
+
+
+/* 2026-09-30 profile portrait: soften top edge into pearl hero */
+.profile-feature .intro-photo{overflow:visible!important}
+.profile-feature .intro-photo img{
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.18) 3%,rgba(0,0,0,.72) 9%,#000 17%,#000 88%,rgba(0,0,0,.78) 94%,transparent 100%)!important;
+  mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.18) 3%,rgba(0,0,0,.72) 9%,#000 17%,#000 88%,rgba(0,0,0,.78) 94%,transparent 100%)!important;
+  -webkit-mask-composite:source-over!important;
+  mask-composite:add!important;
+}
