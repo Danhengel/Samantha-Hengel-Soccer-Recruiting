@@ -201,3 +201,7 @@ body.ref-home{
 
 /* 2026-09-30 recruit homepage card: use coach-facing action image */
 .ref-card-fill.contact-card{background:linear-gradient(rgba(7,29,51,.10),rgba(7,29,51,.56)),url("assets/recruit-action.jpg.jpg")!important;background-size:cover!important;background-position:center 38%!important}
+
+
+/* 2026-09-30 academics homepage card: use more relevant student-athlete image */
+.ref-card-fill.academics-card{background:linear-gradient(rgba(7,29,51,.10),rgba(7,29,51,.54)),url("assets/IMG_0384.jpg")!important;background-size:cover!important;background-position:center 38%!important}
