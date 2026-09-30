@@ -164,3 +164,8 @@ body.ref-home{
 /* 2026-09-30 readability fix: homepage player facts */
 .ref-facts{color:#071d33!important;text-shadow:none!important;width:max-content;max-width:100%}.ref-fact{font-weight:700!important}.ref-fact b{color:#9e7b57!important;text-shadow:none!important}.ref-fact small{color:#31465a!important;font-weight:700!important}.ref-fact span{filter:none!important}
 @media(max-width:900px){.ref-facts{color:#071d33!important}.ref-fact{font-size:9px!important;letter-spacing:.17em!important}.ref-fact small{font-size:7px!important}}
+
+
+/* 2026-09-30 hero composition: lower left action image to clear nameplate */
+@media(min-width:901px){.ref-action-wrap{top:12.5%!important;height:73%!important}.ref-action{object-position:49% 57%!important}}
+@media(max-width:900px){.ref-action-wrap{top:31%!important;height:48%!important}.ref-action{object-position:49% 58%!important}}
