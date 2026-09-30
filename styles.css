@@ -619,3 +619,26 @@ body.editorial-home{overflow:hidden;background:#f2eadf;color:#061d33}
  .editorial-cards a{height:100px!important}
  .editorial-cards span{left:11px!important;bottom:10px!important;font-size:6px!important}
 }
+
+
+/* 2026-09-30 sitewide pearl editorial theme aligned to homepage */
+:root{--navy:#071d33;--navy-deep:#071d33;--navy-mid:#16324b;--pearl:#f8f1e7;--pearl-2:#e8dccd;--muted:#596879;--line:rgba(7,29,51,.14);--gold:#9e7b57}
+body:not(.home-page){background:#f7f7f7;color:var(--navy)}
+body:not(.home-page) main{width:min(1440px,calc(100% - 64px));margin:26px auto 0;overflow:hidden;border-radius:18px;background:linear-gradient(120deg,#faf4ea,#efe4d6 55%,#e3d1ba);box-shadow:0 12px 40px rgba(34,32,28,.05)}
+.site-header{height:58px;position:sticky;top:0;background:rgba(250,246,239,.94);border-bottom:1px solid rgba(7,29,51,.09);color:var(--navy);backdrop-filter:blur(10px)}
+.brand-mark{border-color:rgba(7,29,51,.38);color:var(--gold)}.brand-name,.site-header nav a,.header-socials a{color:var(--navy)!important}.site-header nav a{padding:21px 0 19px}.site-header nav a:after{bottom:10px;background:var(--gold)}
+.page-intro,.film-hero,.type-hero,.academic-hero,.recruit-hero{background:linear-gradient(115deg,#faf4ea 0%,#efe4d6 62%,#e1cbb0 100%);color:var(--navy)}
+.intro-copy h1,.film-hero h1,.type-hero h1,.academic-hero h1,.recruit-hero h1,.section-title h2,.story-block h2,.schedule-layout h2,.references h2,.next-panel h2{color:var(--navy)}
+.intro-copy h1 em,.film-hero h1 em,.type-hero h1 em,.academic-hero h1 em,.recruit-hero h1 em,.section-title h2 em,.story-block h2 em,.schedule-layout h2 em,.references h2 em,.next-panel h2 em{color:var(--gold);-webkit-text-stroke:0;font-style:italic}
+.kicker{color:var(--gold)}
+.intro-copy>p:not(.kicker),.film-hero-copy>p:not(.kicker),.academic-hero>div>p:last-child,.recruit-hero>div>p:last-child,.section-title>p:last-child,.schedule-layout aside>p:last-child,.next-panel>p:not(.kicker),.story-copy>p{color:#4f6070}
+.film-first,.story-block,.schedule-layout,.references,.photo-pair,.gallery,.recruit-links,.next-panel,.next-panel.dark{background:#f8f1e7;color:var(--navy)}
+.traits,.evaluation-list,.academic-list,.reference-names,.fixtures{border-color:var(--line)}.traits>div,.evaluation-list div,.academic-list span,.reference-names span,.fixture{border-color:var(--line)}.traits dt,.evaluation-list span,.traits span,.academic-list span,.schedule-note,.schedule-loading,.fixture-info p,.fixture-note{color:#617080}.traits strong,.evaluation-list strong,.reference-names span,.fixture-info h3{color:var(--navy)}
+.button{background:var(--navy);border-color:var(--navy);color:#fff}.button:hover{background:transparent;color:var(--navy)}.text-link,.text-link.light{color:var(--navy)}
+.snapshot{background:#071d33;color:#f8f1e7;border-color:rgba(255,255,255,.16)}.snapshot div{border-color:rgba(255,255,255,.15)}.snapshot span{color:#c8b79f}
+.schedule-controls button{border-color:rgba(7,29,51,.18);color:#596879}.schedule-controls button.active{background:var(--navy);border-color:var(--navy);color:#fff}.fixture.next{background:rgba(158,123,87,.10)}.fixture-date{border-color:var(--line)}
+.recruit-links>a{border-color:var(--line)}.recruit-links>a:hover{background:rgba(158,123,87,.08)}.recruit-links>a>span,.recruit-links small,.recruit-links p{color:#617080}.recruit-links strong{color:var(--navy)}
+.academic-grid{background:#f8f1e7;border-color:var(--line);color:var(--navy)}.academic-grid div{border-color:var(--line)}.academic-grid span,.academic-grid strong{color:#617080}
+.footer{width:min(1440px,calc(100% - 64px));margin:0 auto 26px;background:#071d33;border-radius:0 0 18px 18px;color:#f8f1e7}.footer .brand-mark{border-color:#f8f1e7;color:#f8f1e7}
+.intro-photo img,.recruit-hero img,.academic-action-photo img{filter:saturate(.82) brightness(.98)}
+@media(max-width:820px){body:not(.home-page) main{width:100%;margin:0;border-radius:0}.site-header{height:auto;min-height:82px;background:rgba(250,246,239,.97)}.footer{width:100%;margin:0;border-radius:0}.page-intro,.film-hero,.academic-hero,.recruit-hero{background:linear-gradient(145deg,#faf4ea,#eadac7)} }
