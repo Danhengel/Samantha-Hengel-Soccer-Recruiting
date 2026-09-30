@@ -178,3 +178,10 @@ body.ref-home{
 /* 2026-09-30 move kicking action photo below Samantha name */
 @media(min-width:901px){.ref-action-wrap{top:24%!important;height:63%!important}.ref-action{object-position:49% 58%!important}}
 @media(max-width:900px){.ref-action-wrap{top:36%!important;height:43%!important}.ref-action{object-position:49% 60%!important}}
+
+
+/* 2026-09-30 add reference-image slate blue depth to homepage */
+.ref-shell{background:linear-gradient(118deg,#f8f1e7 0%,#eee2d3 48%,#d9d7d0 72%,#aeb9c0 100%)!important}
+.ref-action-wrap:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,29,51,0) 48%,rgba(13,39,59,.18) 72%,rgba(7,29,51,.42) 100%);mix-blend-mode:multiply}
+.ref-right:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 55%,rgba(7,29,51,.16) 100%)}
+.ref-card{background:rgba(9,31,49,.82)!important;border-color:rgba(255,255,255,.28)!important}.ref-card-label,.ref-card-icon{color:#f8f1e7!important}
