@@ -191,3 +191,9 @@ body.ref-home{
 .ref-shell:before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(180deg,rgba(250,244,234,.70) 0%,rgba(239,228,214,.40) 34%,rgba(35,59,76,.38) 76%,rgba(7,29,51,.68) 100%),url("assets/IMG_0384.jpg");background-size:cover;background-position:center 44%;filter:saturate(.55) contrast(.88);opacity:.48}
 .ref-shell:after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 48% 35%,rgba(250,244,234,.18),transparent 46%),linear-gradient(90deg,rgba(248,241,231,.58) 0%,rgba(248,241,231,.14) 43%,rgba(7,29,51,.08) 72%,rgba(7,29,51,.16) 100%);backdrop-filter:blur(1.2px)}
 .ref-nav,.ref-copy,.ref-action-wrap,.ref-right,.ref-cards,.ref-social{z-index:2!important}
+
+
+/* 2026-09-30 distinct recruiting-card imagery */
+.ref-card:first-child>img{content:url("assets/IMG_8290.JPEG");object-position:center 42%;filter:saturate(.78) brightness(.76)!important}
+.ref-card-fill.academics-card{background:linear-gradient(rgba(7,29,51,.14),rgba(7,29,51,.52)),url("assets/samantha-profile-cutout-2028.webp")!important;background-size:cover!important;background-position:center 18%!important}
+.ref-card-fill.contact-card{background:linear-gradient(rgba(7,29,51,.14),rgba(7,29,51,.58)),url("assets/IMG_8281.JPEG")!important;background-size:cover!important;background-position:center 35%!important}
