@@ -217,3 +217,26 @@ body.ref-home{
 
 /* 2026-09-30 watch-film card alternate */
 .ref-card:first-child>img{content:url("assets/IMG_0313.JPG")!important;object-position:center 42%!important;filter:saturate(.84) brightness(.73) contrast(1.04)!important}
+
+/* Mobile navigation uses visible rows rather than a sideways strip. */
+@media (max-width:900px){
+  .ref-nav{
+    height:auto;
+    min-height:116px;
+    padding:50px 14px 10px;
+    align-items:flex-end;
+  }
+  .ref-nav nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:5px 15px;
+    max-width:100%;
+    padding:0;
+    overflow:visible;
+  }
+  .ref-nav nav a{font-size:10px;letter-spacing:.08em;line-height:1.4}
+  .ref-nav nav .recruit-nav{padding:5px 8px}
+  .ref-social{top:12px;right:16px}
+  .ref-copy{top:max(132px,18%)}
+}
