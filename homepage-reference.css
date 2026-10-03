@@ -283,3 +283,6 @@ body.ref-home{
     padding:8px 10px;font-size:13px;font-weight:800;line-height:1.2;
   }
 }
+
+/* Keep navigation above the decorative vignette. */
+.ref-nav{z-index:40!important}
