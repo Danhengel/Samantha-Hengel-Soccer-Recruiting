@@ -879,3 +879,10 @@ body:not(.home-page) .site-header{border-bottom:0!important}
 @media (max-width:420px){
   .site-header .brand-name{display:none}
 }
+
+/* Film links live with film; recruiting contacts live on Recruit. */
+@media(max-width:900px){
+  .site-header{grid-template-columns:minmax(0,1fr)}
+  .site-header .brand{grid-column:1}
+  .site-header nav{grid-column:1}
+}
