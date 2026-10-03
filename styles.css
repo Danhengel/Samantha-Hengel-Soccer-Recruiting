@@ -682,7 +682,7 @@ body:not(.home-page) main{width:min(1440px,calc(100% - 64px));margin:26px auto 0
 
 /* 2026-09-30 profile cleanup — editorial pearl card, readable hierarchy, no dead space */
 body:not(.home-page) main{background:#f8f1e7!important}
-.profile-feature{min-height:0!important;padding:clamp(52px,5vw,78px) clamp(58px,6vw,96px)!important;grid-template-columns:minmax(330px,.88fr) minmax(480px,1.12fr)!important;gap:clamp(52px,6vw,92px)!important;align-items:center!important;background:linear-gradient(118deg,#faf5ed 0%,#f1e6d8 58%,#e5d2bb 100%)!important}
+.profile-feature{min-height:0!important;padding:clamp(52px,5vw,78px) clamp(58px,6vw,96px)!important;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)!important;gap:clamp(52px,6vw,92px)!important;align-items:center!important;background:linear-gradient(118deg,#faf5ed 0%,#f1e6d8 58%,#e5d2bb 100%)!important}
 .profile-feature .intro-photo{min-height:500px!important;height:500px!important;align-self:center!important;overflow:visible!important;background:radial-gradient(ellipse at 48% 48%,rgba(255,255,255,.72),rgba(255,255,255,.16) 48%,transparent 70%)!important}
 .profile-feature .intro-photo img{max-height:500px!important;max-width:100%!important;object-fit:contain!important;object-position:center bottom!important;filter:drop-shadow(0 16px 26px rgba(7,29,51,.10)) saturate(.9)!important}
 .profile-overview{max-width:650px!important}.profile-feature .kicker{margin-bottom:16px!important;font-weight:700!important;letter-spacing:.18em!important}.profile-feature h1{margin:0 0 22px!important;font-size:clamp(62px,5.2vw,86px)!important;line-height:.88!important;color:#071d33!important}.profile-feature h1 em{display:block;color:#9e7b57!important;font-size:.86em!important}.profile-feature .profile-overview>p:not(.kicker){max-width:600px!important;margin-bottom:28px!important;color:#42576a!important;font-size:15px!important;line-height:1.75!important}.profile-feature .traits{margin:0 0 30px!important;border-top:1px solid rgba(7,29,51,.14)!important}.profile-feature .traits>div{padding:14px 0!important;grid-template-columns:38px 1fr!important;background:transparent!important}.profile-feature .traits dt{color:#9e7b57!important;font-weight:700!important}.profile-feature .traits strong{color:#071d33!important;font-size:13px!important}.profile-feature .traits span{color:#526476!important;font-size:12px!important;margin-top:4px!important}.profile-feature .actions{margin-top:4px!important;gap:24px!important}.profile-feature .button{padding:13px 20px!important;border-radius:0!important}.profile-feature .text-link{font-weight:700!important}
@@ -776,3 +776,75 @@ body:not(.home-page) main>.coach-quick-hero:before{
   background:none!important;
 }
 body:not(.home-page) .site-header{border-bottom:0!important}
+
+/* Profile: stack before desktop columns become too narrow. */
+@media (max-width:1100px){
+  .page-intro.profile-feature{
+    grid-template-columns:minmax(0,1fr)!important;
+    padding:38px clamp(20px,4vw,44px) 48px!important;
+    gap:24px!important;
+  }
+  .profile-feature .intro-photo{
+    width:100%;
+    height:clamp(240px,78vw,380px)!important;
+    min-height:0!important;
+  }
+  .profile-feature .intro-photo img{
+    width:100%;
+    height:100%;
+    max-height:380px!important;
+  }
+  .profile-feature .profile-overview{
+    width:100%;
+    max-width:650px!important;
+    justify-self:center;
+  }
+  .profile-feature h1{
+    font-size:clamp(36px,10.5vw,64px)!important;
+    line-height:1.06!important;
+    overflow-wrap:break-word;
+  }
+  .profile-feature .kicker{
+    font-size:12px;
+    line-height:1.6;
+    letter-spacing:.12em!important;
+  }
+  .profile-feature .profile-overview>p:not(.kicker){
+    font-size:16px!important;
+    line-height:1.7!important;
+  }
+  .profile-feature .traits strong{font-size:16px!important}
+  .profile-feature .traits span{font-size:14px!important;line-height:1.6}
+  .profile-feature .traits dd{min-width:0}
+  .profile-feature .actions{flex-wrap:wrap;gap:14px 24px!important}
+  .profile-feature .actions a{min-height:48px;font-size:14px;letter-spacing:.06em}
+}
+@media (max-width:600px){
+  .profile-page .site-header{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:8px 12px;
+    height:auto;
+    min-height:0;
+    padding:12px 20px 8px;
+  }
+  .profile-page .brand-name{font-size:10px;letter-spacing:.1em}
+  .profile-page .brand{grid-column:1;grid-row:1;min-width:0}
+  .profile-page .site-header nav{
+    grid-column:1/-1;
+    grid-row:2;
+    flex-wrap:wrap;
+    gap:0 18px;
+    overflow:visible;
+    justify-content:flex-start;
+  }
+  .profile-page .site-header nav a{font-size:12px;letter-spacing:.07em;padding:12px 0}
+  .profile-page .header-socials{grid-column:2;grid-row:1;justify-content:flex-end;gap:4px}
+  .profile-page .header-socials a{height:40px;width:40px}
+  .profile-page .header-socials .veo-icon{width:44px}
+  .profile-feature .actions{align-items:stretch}
+  .profile-feature .actions .button{width:100%;justify-content:space-between}
+  .profile-feature .actions .text-link{width:fit-content}
+}
+
+@media (max-width:420px){.profile-page .brand-name{display:none}}
