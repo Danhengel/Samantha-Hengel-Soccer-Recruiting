@@ -886,3 +886,11 @@ body:not(.home-page) .site-header{border-bottom:0!important}
   .site-header .brand{grid-column:1}
   .site-header nav{grid-column:1}
 }
+
+/* Mobile navigation contrast. */
+@media(max-width:900px){
+  .site-header nav a,
+  .profile-page .site-header nav a,
+  .site-header nav a.active{color:#071d33!important;opacity:1;font-size:13px;font-weight:800;letter-spacing:.06em}
+  .site-header nav a.active:after{background:#071d33}
+}

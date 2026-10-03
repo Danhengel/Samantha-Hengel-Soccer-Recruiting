@@ -270,3 +270,8 @@ body.ref-home{
 @media(max-width:900px){
   .ref-film-cta{left:22px;right:22px;bottom:18px;width:min(320px,calc(100% - 44px));min-height:56px}
 }
+
+/* Clear, readable navigation on phones. */
+@media(max-width:900px){
+  .ref-nav nav a{color:#071d33;font-size:12px;font-weight:800;opacity:1;letter-spacing:.06em}
+}
