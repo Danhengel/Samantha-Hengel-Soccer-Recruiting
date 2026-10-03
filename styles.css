@@ -894,3 +894,12 @@ body:not(.home-page) .site-header{border-bottom:0!important}
   .site-header nav a.active{color:#071d33!important;opacity:1;font-size:13px;font-weight:800;letter-spacing:.06em}
   .site-header nav a.active:after{background:#071d33}
 }
+
+/* Give the current Profile tab a definite mobile contrast. */
+@media(max-width:900px){
+  .profile-page .site-header nav a.active[href="profile.html"]{
+    color:#fff!important;background:#071d33;border-radius:3px;
+    padding:9px 12px;font-size:13px;font-weight:800;
+  }
+  .profile-page .site-header nav a.active[href="profile.html"]:after{display:none}
+}

@@ -275,3 +275,11 @@ body.ref-home{
 @media(max-width:900px){
   .ref-nav nav a{color:#071d33;font-size:12px;font-weight:800;opacity:1;letter-spacing:.06em}
 }
+
+/* Make Profile easy to find and read on phones. */
+@media(max-width:900px){
+  .ref-nav nav a[href="profile.html"]{
+    color:#fff!important;background:#071d33;border-radius:3px;
+    padding:8px 10px;font-size:13px;font-weight:800;line-height:1.2;
+  }
+}
