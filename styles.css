@@ -848,3 +848,34 @@ body:not(.home-page) .site-header{border-bottom:0!important}
 }
 
 @media (max-width:420px){.profile-page .brand-name{display:none}}
+
+/* Keep every navigation item visible on phones and tablets. */
+@media (max-width:900px){
+  .site-header{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:4px 12px;
+    height:auto;
+    min-height:0;
+    padding:10px 20px 6px;
+  }
+  .site-header .brand{grid-column:1;grid-row:1;min-width:0}
+  .site-header .brand-name{font-size:10px;letter-spacing:.1em}
+  .site-header .header-socials{grid-column:2;grid-row:1;justify-content:flex-end;gap:4px}
+  .site-header .header-socials a{height:38px;width:38px}
+  .site-header .header-socials .veo-icon{width:42px}
+  .site-header nav{
+    grid-column:1/-1;
+    grid-row:2;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    gap:0 18px;
+    width:100%;
+    overflow:visible;
+  }
+  .site-header nav a{padding:10px 0 12px;font-size:11px;letter-spacing:.08em}
+}
+@media (max-width:420px){
+  .site-header .brand-name{display:none}
+}
