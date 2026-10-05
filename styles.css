@@ -912,3 +912,22 @@ body:not(.home-page) .site-header{border-bottom:0!important}
     text-align:center;
   }
 }
+
+
+/* 2026-10-04: enforce centered navigation across every mobile interior page */
+@media(max-width:900px){
+  body:not(.home-page) .site-header nav,
+  .profile-page .site-header nav,
+  .film-page .site-header nav,
+  .academics-page .site-header nav{
+    grid-column:1 / -1 !important;
+    width:100% !important;
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    align-items:center !important;
+    text-align:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+}
