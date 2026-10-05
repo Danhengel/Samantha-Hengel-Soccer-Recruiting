@@ -2193,3 +2193,18 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
      url("assets/recruit-action.jpg.jpg") center 42%/cover no-repeat!important;
  }
 }
+
+/* 2026-10-05: seamlessly blend recruiting photo into hero canvas at bottom/right */
+@media(min-width:901px){
+ .coach-quick-hero:after{
+   bottom:-2px!important;
+   background:
+     linear-gradient(to right,transparent 0%,transparent 72%,rgba(250,244,234,.12) 80%,rgba(250,244,234,.42) 89%,rgba(250,244,234,.78) 96%,#faf4ea 100%),
+     linear-gradient(to bottom,transparent 0%,transparent 58%,rgba(250,244,234,.08) 68%,rgba(250,244,234,.28) 78%,rgba(250,244,234,.62) 89%,rgba(250,244,234,.9) 96%,#faf4ea 100%),
+     linear-gradient(90deg,#faf4ea 0%,rgba(250,244,234,.72) 18%,rgba(250,244,234,.50) 42%,rgba(250,244,234,.50) 100%),
+     url("assets/recruit-action.jpg.jpg") center 42%/cover no-repeat!important;
+ }
+ .coach-quick-hero{
+   background:#faf4ea!important;
+ }
+}
