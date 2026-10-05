@@ -1953,3 +1953,23 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    background:none!important;
  }
 }
+
+/* 2026-10-05: fix actual outer-shell strip visible beside academics content */
+@media(min-width:901px){
+ body.academics-page{
+   background:#faf4ea!important;
+   background-color:#faf4ea!important;
+   background-image:none!important;
+ }
+ body.academics-page::before,
+ body.academics-page::after{
+   content:none!important;
+   display:none!important;
+   background:none!important;
+ }
+ body.academics-page>main{
+   background:#faf4ea!important;
+   width:100%!important;
+   max-width:none!important;
+ }
+}
