@@ -478,3 +478,19 @@ body.ref-home{
    width:39.5%!important;
  }
 }
+
+/* 2026-10-05: tighten homepage action-photo fade while preserving soft seams */
+@media(min-width:901px){
+ .ref-action-wrap{
+   -webkit-mask-image:
+     linear-gradient(90deg,transparent 0%,rgba(0,0,0,.12) 5%,rgba(0,0,0,.42) 10%,rgba(0,0,0,.76) 15%,#000 21%,#000 84%,rgba(0,0,0,.72) 90%,rgba(0,0,0,.28) 96%,transparent 100%),
+     linear-gradient(180deg,transparent 0%,rgba(0,0,0,.06) 5%,rgba(0,0,0,.22) 10%,rgba(0,0,0,.52) 16%,rgba(0,0,0,.82) 22%,#000 28%,#000 91%,rgba(0,0,0,.55) 96%,transparent 100%)!important;
+   -webkit-mask-composite:source-in!important;
+   mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.12) 5%,rgba(0,0,0,.42) 10%,rgba(0,0,0,.76) 15%,#000 21%,#000 84%,rgba(0,0,0,.72) 90%,rgba(0,0,0,.28) 96%,transparent 100%)!important;
+ }
+ .ref-vignette{
+   background:
+     linear-gradient(90deg,#f9f4ec 0%,rgba(249,244,236,.95) 12%,rgba(249,244,236,.62) 22%,rgba(249,244,236,.25) 31%,transparent 40%),
+     linear-gradient(0deg,#061d33 0%,rgba(6,29,51,.97) 14%,rgba(6,29,51,.73) 26%,rgba(6,29,51,.28) 40%,transparent 58%)!important;
+ }
+}
