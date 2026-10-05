@@ -1730,3 +1730,18 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    object-position:50% 34%!important;
  }
 }
+
+/* 2026-10-05: eliminate empty right side of academics photo crop */
+@media(min-width:901px){
+ .academics-page .academic-action-photo{
+   overflow:hidden!important;
+ }
+ .academics-page .academic-action-photo img{
+   width:112%!important;
+   max-width:none!important;
+   height:100%!important;
+   object-fit:cover!important;
+   object-position:38% 34%!important;
+   transform:translateX(-6%)!important;
+ }
+}
