@@ -629,3 +629,38 @@ body.ref-home{
    z-index:1!important;
  }
 }
+
+
+/* 2026-10-05: iPhone Safari fix — first name was clipped above HENGEL */
+@media(max-width:900px){
+ .ref-copy{top:118px!important;}
+ .ref-title{
+   height:158px!important;
+   padding-top:0!important;
+   overflow:visible!important;
+ }
+ .ref-first{
+   position:relative!important;
+   display:block!important;
+   left:0!important;
+   top:0!important;
+   transform:rotate(-4deg)!important;
+   transform-origin:left center!important;
+   font-size:58px!important;
+   line-height:1.05!important;
+   height:64px!important;
+   color:#9e7b57!important;
+   white-space:nowrap!important;
+   overflow:visible!important;
+ }
+ .ref-last{
+   position:relative!important;
+   display:block!important;
+   left:0!important;
+   top:0!important;
+   margin-top:-2px!important;
+   font-size:72px!important;
+   line-height:.82!important;
+   white-space:nowrap!important;
+ }
+}
