@@ -593,3 +593,39 @@ body.ref-home{
    padding:14px 13px!important;
  }
 }
+
+
+/* 2026-10-05: mobile identity name — keep Samantha fully visible */
+@media(max-width:900px){
+ .ref-copy{
+   left:18px!important;
+   right:18px!important;
+   width:auto!important;
+   top:96px!important;
+   overflow:visible!important;
+   z-index:12!important;
+ }
+ .ref-title{
+   height:142px!important;
+   max-height:none!important;
+   overflow:visible!important;
+ }
+ .ref-first{
+   display:block!important;
+   position:absolute!important;
+   left:0!important;
+   top:0!important;
+   font-size:64px!important;
+   line-height:1!important;
+   white-space:nowrap!important;
+   visibility:visible!important;
+   opacity:1!important;
+   z-index:2!important;
+ }
+ .ref-last{
+   top:66px!important;
+   left:0!important;
+   font-size:72px!important;
+   z-index:1!important;
+ }
+}
