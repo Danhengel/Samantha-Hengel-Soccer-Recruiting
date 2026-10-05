@@ -2449,3 +2449,18 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    box-sizing:border-box!important;
  }
 }
+
+/* 2026-10-05: extra-large header navigation hit targets */
+@media(min-width:901px){
+ .interior-ref-nav nav a:not(.recruit-nav){
+   min-height:56px!important;
+   padding:16px 20px!important;
+   margin:-16px -20px!important;
+ }
+}
+@media(max-width:900px){
+ .interior-ref-nav nav a{
+   min-height:52px!important;
+   padding:14px 13px!important;
+ }
+}
