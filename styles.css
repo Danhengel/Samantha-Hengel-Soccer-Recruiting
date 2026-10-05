@@ -1580,3 +1580,60 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    flex:0 0 auto!important;
  }
 }
+
+/* 2026-10-05: academics details layered onto hero/photo instead of separate lower block */
+@media(min-width:901px){
+ .academics-page .academic-photo-hero{
+   position:relative!important;
+   height:100%!important;
+   min-height:0!important;
+   overflow:hidden!important;
+ }
+ .academics-page .academic-hero-copy{
+   position:relative!important;
+   z-index:4!important;
+   align-self:start!important;
+ }
+ .academics-page .academic-overlay-story{
+   margin-top:22px!important;
+   max-width:600px!important;
+   padding:18px 22px!important;
+   background:rgba(250,244,234,.78)!important;
+   backdrop-filter:blur(8px)!important;
+   -webkit-backdrop-filter:blur(8px)!important;
+   border:1px solid rgba(158,123,87,.18)!important;
+   border-radius:14px!important;
+ }
+ .academics-page .academic-overlay-story .kicker{
+   margin:0 0 6px!important;
+   color:#9e7b57!important;
+ }
+ .academics-page .academic-overlay-story h2{
+   margin:0 0 8px!important;
+   color:#071d33!important;
+   font:600 clamp(28px,2.3vw,40px)/.98 "Cormorant Garamond",serif!important;
+ }
+ .academics-page .academic-overlay-story h2 em{
+   color:#a47d56!important;
+   font-weight:500!important;
+ }
+ .academics-page .academic-overlay-story>p:not(.kicker){
+   margin:0 0 8px!important;
+   color:#435568!important;
+   font-size:14px!important;
+   line-height:1.4!important;
+ }
+ .academics-page .academic-overlay-story .academic-list{
+   display:grid!important;
+   gap:0!important;
+ }
+ .academics-page .academic-overlay-story .academic-list span{
+   padding:5px 0!important;
+   color:#52677a!important;
+   font-size:12.5px!important;
+   line-height:1.25!important;
+   border-top:1px solid rgba(7,29,51,.12)!important;
+ }
+ .academics-page .academic-overlay-story .academic-list strong{color:#52677a!important}
+ .academics-page .story-block{display:none!important}
+}
