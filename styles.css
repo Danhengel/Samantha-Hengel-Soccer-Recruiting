@@ -1275,3 +1275,34 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    align-items:center!important;
  }
 }
+
+/* 2026-10-05: eliminate vertical seam between profile columns */
+@media(min-width:901px){
+ .profile-page .profile-feature{
+   position:relative!important;
+   isolation:isolate!important;
+ }
+ .profile-page .intro-photo{
+   overflow:visible!important;
+   -webkit-mask-image:none!important;
+   mask-image:none!important;
+ }
+ .profile-page .intro-photo:before{
+   content:""!important;
+   position:absolute!important;
+   z-index:2!important;
+   top:-2%!important;
+   bottom:-2%!important;
+   left:-14%!important;
+   width:34%!important;
+   pointer-events:none!important;
+   background:linear-gradient(to right,
+     rgba(250,244,234,1) 0%,
+     rgba(250,244,234,.96) 18%,
+     rgba(250,244,234,.72) 45%,
+     rgba(250,244,234,.32) 72%,
+     rgba(250,244,234,0) 100%)!important;
+   filter:blur(5px)!important;
+ }
+ .profile-page .intro-photo img{position:relative!important;z-index:1!important}
+}
