@@ -2084,3 +2084,12 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    justify-self:start!important;
  }
 }
+
+/* 2026-10-05: horizontally center the left academics content within its column */
+@media(min-width:901px){
+ .academics-page .academic-hero-copy{
+   justify-self:center!important;
+   margin-left:auto!important;
+   margin-right:auto!important;
+ }
+}
