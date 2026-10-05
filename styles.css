@@ -2319,3 +2319,10 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    transform:translateX(2px)!important;
  }
 }
+
+/* 2026-10-05: Recruit Samantha drops down on hover */
+@media(min-width:901px){
+ .interior-ref-nav nav .recruit-nav:hover{
+   transform:translateY(4px)!important;
+ }
+}
