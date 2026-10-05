@@ -368,3 +368,10 @@ body.ref-home{
     mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.12) 4%,rgba(0,0,0,.55) 11%,#000 22%,#000 86%,transparent 100%)!important;
   }
 }
+
+
+/* 2026-10-04: recruiting contact links visible on homepage desktop and mobile */
+.ref-nav .mobile-media-links{display:flex;justify-content:center;align-items:center;gap:1.25cqw;width:100%;position:absolute;left:0;right:0;top:100%;padding:.48cqw 0;background:rgba(250,246,239,.82);backdrop-filter:blur(7px)}
+.ref-nav .mobile-media-links a{font-family:Manrope,sans-serif;font-size:.60cqw;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9e7b57;text-decoration:none;white-space:nowrap}
+.ref-nav .mobile-media-links a:hover{color:#071d33}
+@media(max-width:900px){.ref-nav .mobile-media-links{display:flex!important;position:static!important;flex-wrap:wrap!important;gap:2px 14px!important;width:100%!important;height:auto!important;padding:1px 0 5px!important;background:transparent!important}.ref-nav .mobile-media-links a{font-size:9px!important;line-height:18px!important}}
