@@ -939,3 +939,12 @@ body:not(.home-page) .site-header{border-bottom:0!important}
   .site-header .mobile-media-links{grid-column:1/-1;display:flex;justify-content:center;align-items:center;gap:18px;width:100%;padding:0 0 8px}
   .site-header .mobile-media-links a{font-family:Manrope,sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9e7b57;text-decoration:none}
 }
+
+
+/* Keep media links directly beneath centered mobile tabs */
+@media(max-width:900px){
+  .site-header{display:grid!important;grid-template-columns:1fr!important;grid-template-rows:auto auto auto!important}
+  .site-header .brand{grid-column:1!important;grid-row:1!important}
+  .site-header nav{grid-column:1!important;grid-row:2!important;order:2!important}
+  .site-header .mobile-media-links{grid-column:1!important;grid-row:3!important;order:3!important;margin-top:-2px!important;padding:0 0 9px!important}
+}
