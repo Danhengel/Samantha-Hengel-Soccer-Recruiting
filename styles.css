@@ -1150,3 +1150,43 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    margin-top:0!important;
  }
 }
+
+/* 2026-10-05: make every desktop page use the same outer canvas + 3:2 shell as homepage */
+@media(min-width:901px){
+ body:not(.ref-home){
+   padding:31px 32px 16px 46px!important;
+   background:#f7f7f7!important;
+   display:grid!important;
+   grid-template-columns:min(100%,calc((100vh - 47px)*1.5))!important;
+   grid-template-rows:74px minmax(0,1fr) auto!important;
+   justify-content:center!important;
+   align-content:start!important;
+   height:100vh!important;
+   overflow:hidden!important;
+ }
+ body:not(.ref-home)>.interior-ref-nav,
+ body:not(.ref-home)>main,
+ body:not(.ref-home)>.recruiting-footer{
+   width:100%!important;
+   max-width:none!important;
+   margin-left:0!important;
+   margin-right:0!important;
+ }
+ body:not(.ref-home)>.interior-ref-nav{
+   grid-row:1!important;
+   margin-top:0!important;
+   border-radius:18px 18px 0 0!important;
+ }
+ body:not(.ref-home)>main{
+   grid-row:2!important;
+   min-height:0!important;
+   height:auto!important;
+   border-radius:0!important;
+   overflow:hidden!important;
+ }
+ body:not(.ref-home)>.recruiting-footer{
+   grid-row:3!important;
+   border-radius:0 0 18px 18px!important;
+   margin:0!important;
+ }
+}
