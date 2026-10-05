@@ -1382,3 +1382,29 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    background:linear-gradient(180deg,rgba(250,246,239,.42) 0%,rgba(250,246,239,.16) 45%,transparent 100%)!important;
  }
 }
+
+/* 2026-10-05: remove interior header/content seam completely */
+@media(min-width:901px){
+ body:not(.ref-home)>.interior-ref-nav{
+   background:#faf4ea!important;
+   backdrop-filter:none!important;
+   -webkit-backdrop-filter:none!important;
+   border:0!important;
+   box-shadow:none!important;
+   border-radius:18px 18px 0 0!important;
+ }
+ body:not(.ref-home)>.interior-ref-nav:after{display:none!important}
+ .profile-page>.interior-ref-nav{
+   background:#faf4ea!important;
+ }
+ .profile-page>main,
+ .profile-page .profile-feature{
+   border-top:0!important;
+   box-shadow:none!important;
+ }
+ .profile-page .profile-feature{
+   background:
+     radial-gradient(circle at 82% 12%,rgba(255,250,239,.95) 0%,rgba(255,249,237,.48) 22%,transparent 42%),
+     linear-gradient(110deg,#faf4ea 0%,#efe4d6 55%,#dbc5a8 100%)!important;
+ }
+}
