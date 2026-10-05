@@ -1317,3 +1317,11 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    object-position:center top!important;
  }
 }
+
+/* 2026-10-05: raise profile portrait further */
+@media(min-width:901px){
+ .profile-page .intro-photo{
+   transform:translateY(-10%)!important;
+   height:110%!important;
+ }
+}
