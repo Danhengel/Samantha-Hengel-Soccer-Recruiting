@@ -1901,3 +1901,34 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    box-shadow:none!important;
  }
 }
+
+/* 2026-10-05: blend the actual right edge of the academics content canvas into the outer shell */
+@media(min-width:901px){
+ .academics-page>main{
+   overflow:visible!important;
+   background:transparent!important;
+ }
+ .academics-page .academic-photo-hero{
+   position:relative!important;
+   overflow:visible!important;
+   background:#faf4ea!important;
+ }
+ .academics-page .academic-photo-hero::after{
+   content:""!important;
+   display:block!important;
+   position:absolute!important;
+   z-index:50!important;
+   top:0!important;
+   bottom:0!important;
+   right:-64px!important;
+   width:128px!important;
+   pointer-events:none!important;
+   background:linear-gradient(90deg,
+     #faf4ea 0%,
+     rgba(250,244,234,.98) 18%,
+     rgba(250,244,234,.86) 38%,
+     rgba(250,244,234,.58) 62%,
+     rgba(250,244,234,.24) 82%,
+     rgba(250,244,234,0) 100%)!important;
+ }
+}
