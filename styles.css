@@ -1842,3 +1842,39 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
      #faf4ea 100%)!important;
  }
 }
+
+/* 2026-10-05: remove hard academics canvas edge by matching shell background */
+@media(min-width:901px){
+ .academics-page,
+ .academics-page>main,
+ .academics-page .academic-photo-hero{
+   background:#faf4ea!important;
+ }
+ .academics-page .academic-photo-hero{
+   box-shadow:none!important;
+   border:0!important;
+ }
+ .academics-page .academic-photo-hero:before,
+ .academics-page .academic-photo-hero:after{
+   content:none!important;
+   display:none!important;
+ }
+ .academics-page>main{
+   position:relative!important;
+ }
+ .academics-page>main:after{
+   content:""!important;
+   position:absolute!important;
+   inset:0!important;
+   pointer-events:none!important;
+   z-index:0!important;
+   background:radial-gradient(ellipse at center,
+     rgba(219,197,168,.30) 0%,
+     rgba(239,228,214,.22) 45%,
+     rgba(250,244,234,0) 82%)!important;
+ }
+ .academics-page>main>*{
+   position:relative!important;
+   z-index:1!important;
+ }
+}
