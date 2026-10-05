@@ -2093,3 +2093,26 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    margin-right:auto!important;
  }
 }
+
+/* 2026-10-05: mirror left/right academics text blocks around center image */
+@media(min-width:901px){
+ .academics-page .academic-photo-hero{
+   grid-template-columns:minmax(420px,500px) minmax(360px,470px) minmax(420px,500px)!important;
+ }
+ .academics-page .academic-hero-copy{
+   width:100%!important;
+   max-width:500px!important;
+   justify-self:end!important;
+   padding:0!important;
+ }
+ .academics-page .academic-overlay-story{
+   width:100%!important;
+   max-width:500px!important;
+   justify-self:start!important;
+   padding:0!important;
+ }
+ .academics-page .academic-hero-copy>p:not(.kicker),
+ .academics-page .academic-overlay-story>p:not(.kicker){
+   max-width:100%!important;
+ }
+}
