@@ -1780,3 +1780,29 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    padding:0!important;
  }
 }
+
+/* 2026-10-05: force academics right column to have no card surface */
+@media(min-width:901px){
+ .academics-page .academic-overlay-story,
+ .academics-page .academic-overlay-story::before,
+ .academics-page .academic-overlay-story::after{
+   background:none!important;
+   background-color:transparent!important;
+   background-image:none!important;
+   border:none!important;
+   outline:none!important;
+   border-radius:0!important;
+   box-shadow:none!important;
+   filter:none!important;
+   backdrop-filter:none!important;
+   -webkit-backdrop-filter:none!important;
+ }
+ .academics-page .academic-overlay-story{
+   padding:0!important;
+ }
+ .academics-page .academic-overlay-story::before,
+ .academics-page .academic-overlay-story::after{
+   content:none!important;
+   display:none!important;
+ }
+}
