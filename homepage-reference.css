@@ -462,3 +462,11 @@ body.ref-home{
    filter:saturate(.72) contrast(.96) brightness(1.03)!important;
  }
 }
+
+/* 2026-10-05: stronger homepage action-photo presence */
+@media(min-width:901px){
+ .ref-action{
+   opacity:.96!important;
+   filter:saturate(.86) contrast(1.01) brightness(1.01)!important;
+ }
+}
