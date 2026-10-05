@@ -1745,3 +1745,14 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    transform:translateX(-6%)!important;
  }
 }
+
+/* 2026-10-05: clearer academics action photo */
+@media(min-width:901px){
+ .academics-page .academic-action-photo img{
+   filter:saturate(.96) contrast(1.07) brightness(1.03) sharpen(1)!important;
+   image-rendering:auto!important;
+ }
+ .academics-page .academic-action-photo:after{
+   background:linear-gradient(90deg,rgba(250,244,234,.34) 0%,rgba(250,244,234,.10) 10%,transparent 24%)!important;
+ }
+}
