@@ -2145,3 +2145,10 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    transform:translateY(42px)!important;
  }
 }
+
+/* 2026-10-05: nudge left academics block another 10px upward */
+@media(min-width:901px){
+ .academics-page .academic-hero-copy{
+   transform:translateY(32px)!important;
+ }
+}
