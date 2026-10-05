@@ -2426,3 +2426,26 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    transform:translateY(calc(-50% + 10px))!important;
  }
 }
+
+/* 2026-10-05: larger, easier header tab hit areas */
+@media(min-width:901px){
+ .interior-ref-nav nav a:not(.recruit-nav){
+   display:flex!important;
+   align-items:center!important;
+   justify-content:center!important;
+   min-height:44px!important;
+   padding:10px 12px!important;
+   margin:-10px -12px!important;
+   box-sizing:border-box!important;
+ }
+}
+@media(max-width:900px){
+ .interior-ref-nav nav a{
+   display:flex!important;
+   align-items:center!important;
+   justify-content:center!important;
+   min-height:44px!important;
+   padding:10px 9px!important;
+   box-sizing:border-box!important;
+ }
+}
