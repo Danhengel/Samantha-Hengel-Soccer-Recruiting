@@ -2389,3 +2389,40 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    transform:translateY(10px)!important;
  }
 }
+
+/* 2026-10-05: unified 10px drop animation for clickable site buttons */
+@media(min-width:901px){
+ a.btn,
+ button,
+ .button,
+ .cta,
+ .film-primary-action,
+ .film-coach-actions a,
+ .schedule-controls a,
+ .schedule-controls button,
+ .contact-actions a,
+ .coach-actions a,
+ .interior-ref-nav nav a{
+   transition:transform .2s ease,background .2s ease,border-color .2s ease,color .2s ease!important;
+ }
+ a.btn:hover,
+ button:hover,
+ .button:hover,
+ .cta:hover,
+ .film-primary-action:hover,
+ .film-coach-actions a:hover,
+ .schedule-controls a:hover,
+ .schedule-controls button:hover,
+ .contact-actions a:hover,
+ .coach-actions a:hover,
+ .interior-ref-nav nav a:hover{
+   transform:translateY(10px)!important;
+ }
+ /* keep ordinary center navigation links stationary; animate button-style Recruit only */
+ .interior-ref-nav nav a:not(.recruit-nav):hover{
+   transform:none!important;
+ }
+ .interior-ref-nav .interior-home:hover{
+   transform:translateY(calc(-50% + 10px))!important;
+ }
+}
