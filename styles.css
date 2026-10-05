@@ -2362,3 +2362,20 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    color:#faf4ea!important;
  }
 }
+
+/* 2026-10-05: correct hover transforms — preserve Home vertical centering and match Recruit drop */
+@media(min-width:901px){
+ .interior-ref-nav .interior-home{
+   top:50%!important;
+   transform:translateY(-50%)!important;
+ }
+ .interior-ref-nav .interior-home:hover{
+   transform:translateY(calc(-50% + 4px))!important;
+ }
+ .interior-ref-nav nav .recruit-nav{
+   transform:translateY(0)!important;
+ }
+ .interior-ref-nav nav .recruit-nav:hover{
+   transform:translateY(4px)!important;
+ }
+}
