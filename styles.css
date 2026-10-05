@@ -2290,3 +2290,22 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    letter-spacing:.16em!important;
  }
 }
+
+/* 2026-10-05: match SH Home outline to Recruit Samantha nav button */
+@media(min-width:901px){
+ .interior-ref-nav .interior-home{
+   border:1px solid #071d33!important;
+   border-radius:0!important;
+   background:transparent!important;
+   box-shadow:none!important;
+   height:auto!important;
+   padding:14px 18px!important;
+ }
+ .interior-ref-nav .interior-home:hover{
+   background:#071d33!important;
+   border-color:#071d33!important;
+ }
+ .interior-ref-nav .interior-home:hover span:last-child::after{
+   color:#faf4ea!important;
+ }
+}
