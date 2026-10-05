@@ -1973,3 +1973,25 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    max-width:none!important;
  }
 }
+
+/* 2026-10-05: academics shell fix — remove the visible right-side outer-canvas strip */
+@media(min-width:901px){
+ body.academics-page{
+   grid-template-columns:minmax(0,1fr)!important;
+   width:100vw!important;
+   max-width:none!important;
+   padding-left:24px!important;
+   padding-right:24px!important;
+   background:#faf4ea!important;
+ }
+ body.academics-page>.interior-ref-nav,
+ body.academics-page>main,
+ body.academics-page>.recruiting-footer{
+   width:100%!important;
+   max-width:none!important;
+   justify-self:stretch!important;
+ }
+ body.academics-page>main{
+   overflow:hidden!important;
+ }
+}
