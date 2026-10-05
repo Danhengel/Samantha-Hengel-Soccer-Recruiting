@@ -380,3 +380,20 @@ body.ref-home{
 /* 2026-10-04: homepage footer integrated into hero */
 @media(min-width:901px){.ref-nav .mobile-media-links{display:none!important}.ref-nav{height:5.85%!important}.ref-shell>.recruiting-footer{position:absolute;z-index:30;left:0;right:0;bottom:0;height:4.8%;min-height:32px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1.5cqw;padding:0 2.2%;background:rgba(248,241,231,.90);border-top:1px solid rgba(7,29,51,.12);backdrop-filter:blur(8px);color:#071d33;font-family:Manrope,Arial,sans-serif}.ref-shell>.recruiting-footer .recruiting-footer-identity{display:flex;align-items:center;gap:.8cqw}.ref-shell>.recruiting-footer .recruiting-footer-identity strong{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.05cqw;font-weight:600;white-space:nowrap}.ref-shell>.recruiting-footer .recruiting-footer-identity span,.ref-shell>.recruiting-footer>small{font-size:.48cqw;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#64717c}.ref-shell>.recruiting-footer .recruiting-footer-links{display:flex;justify-content:center;gap:1.25cqw}.ref-shell>.recruiting-footer .recruiting-footer-links a{font-size:.53cqw;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#9e7b57;text-decoration:none}.ref-shell>.recruiting-footer>small{justify-self:end}}
 @media(max-width:900px){.ref-shell>.recruiting-footer{position:absolute;z-index:30;left:0;right:0;bottom:0;display:grid;justify-items:center;gap:4px;padding:8px 14px 10px;background:rgba(248,241,231,.92);border-top:1px solid rgba(7,29,51,.12);color:#071d33;text-align:center}.ref-shell>.recruiting-footer .recruiting-footer-identity{display:flex;gap:8px;align-items:center}.ref-shell>.recruiting-footer .recruiting-footer-identity strong{font-family:"Cormorant Garamond",Georgia,serif;font-size:15px}.ref-shell>.recruiting-footer .recruiting-footer-identity span,.ref-shell>.recruiting-footer>small{font-size:6px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.ref-shell>.recruiting-footer .recruiting-footer-links{display:flex;gap:14px}.ref-shell>.recruiting-footer .recruiting-footer-links a{font-size:7px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#9e7b57;text-decoration:none}}
+
+/* 2026-10-05: homepage action-photo seam blend — remove vertical hard edge */
+@media(min-width:901px){
+ .ref-action-wrap{
+   -webkit-mask-image:
+     linear-gradient(to right,transparent 0%,rgba(0,0,0,.10) 5%,rgba(0,0,0,.48) 13%,#000 27%,#000 78%,rgba(0,0,0,.58) 89%,transparent 100%),
+     linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.12) 4%,rgba(0,0,0,.55) 11%,#000 22%,#000 86%,transparent 100%)!important;
+   -webkit-mask-composite:source-in!important;
+   mask-image:
+     linear-gradient(to right,transparent 0%,rgba(0,0,0,.10) 5%,rgba(0,0,0,.48) 13%,#000 27%,#000 78%,rgba(0,0,0,.58) 89%,transparent 100%)!important;
+ }
+ .ref-vignette{
+   background:
+     linear-gradient(90deg,rgba(249,244,236,1) 0%,rgba(249,244,236,.97) 18%,rgba(249,244,236,.78) 31%,rgba(249,244,236,.38) 44%,rgba(249,244,236,.10) 57%,transparent 72%),
+     linear-gradient(0deg,#061d33 0%,rgba(6,29,51,.97) 14%,rgba(6,29,51,.73) 26%,rgba(6,29,51,.28) 40%,transparent 58%)!important;
+ }
+}
