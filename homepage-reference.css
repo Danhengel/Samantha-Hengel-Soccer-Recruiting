@@ -516,3 +516,8 @@ body.ref-home{
 @media(min-width:901px){
  .ref-action{opacity:.82!important}
 }
+
+/* 2026-10-05: set homepage action shot to 70% opacity */
+@media(min-width:901px){
+ .ref-action{opacity:.70!important}
+}
