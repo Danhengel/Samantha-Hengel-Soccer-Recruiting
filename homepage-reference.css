@@ -504,3 +504,10 @@ body.ref-home{
    -webkit-mask-composite:source-in!important;
  }
 }
+
+/* 2026-10-05: slightly soften homepage action-shot opacity */
+@media(min-width:901px){
+ .ref-action{
+   opacity:.88!important;
+ }
+}
