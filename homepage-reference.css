@@ -494,3 +494,13 @@ body.ref-home{
      linear-gradient(0deg,#061d33 0%,rgba(6,29,51,.97) 14%,rgba(6,29,51,.73) 26%,rgba(6,29,51,.28) 40%,transparent 58%)!important;
  }
 }
+
+/* 2026-10-05: strengthen only the homepage action-photo top fade */
+@media(min-width:901px){
+ .ref-action-wrap{
+   -webkit-mask-image:
+     linear-gradient(90deg,transparent 0%,rgba(0,0,0,.12) 5%,rgba(0,0,0,.42) 10%,rgba(0,0,0,.76) 15%,#000 21%,#000 84%,rgba(0,0,0,.72) 90%,rgba(0,0,0,.28) 96%,transparent 100%),
+     linear-gradient(180deg,transparent 0%,rgba(0,0,0,.02) 7%,rgba(0,0,0,.10) 14%,rgba(0,0,0,.30) 21%,rgba(0,0,0,.58) 28%,rgba(0,0,0,.82) 34%,#000 40%,#000 91%,rgba(0,0,0,.55) 96%,transparent 100%)!important;
+   -webkit-mask-composite:source-in!important;
+ }
+}
