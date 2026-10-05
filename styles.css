@@ -931,3 +931,11 @@ body:not(.home-page) .site-header{border-bottom:0!important}
     margin-right:auto !important;
   }
 }
+
+
+/* Mobile-only recruiting media links */
+.mobile-media-links{display:none}
+@media(max-width:900px){
+  .site-header .mobile-media-links{grid-column:1/-1;display:flex;justify-content:center;align-items:center;gap:18px;width:100%;padding:0 0 8px}
+  .site-header .mobile-media-links a{font-family:Manrope,sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9e7b57;text-decoration:none}
+}
