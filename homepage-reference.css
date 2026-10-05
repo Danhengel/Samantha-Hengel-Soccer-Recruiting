@@ -425,3 +425,19 @@ body.ref-home{
    -webkit-mask-composite:source-in!important;
  }
 }
+
+/* 2026-10-05: remove visible horizontal start line from homepage field image */
+@media(min-width:901px){
+ .ref-action-wrap{
+   top:14%!important;
+   height:73%!important;
+   overflow:visible!important;
+   -webkit-mask-image:
+     linear-gradient(90deg,transparent 0%,rgba(0,0,0,.02) 10%,rgba(0,0,0,.08) 17%,rgba(0,0,0,.20) 24%,rgba(0,0,0,.42) 32%,rgba(0,0,0,.70) 40%,#000 50%,#000 78%,rgba(0,0,0,.62) 87%,transparent 100%),
+     linear-gradient(180deg,transparent 0%,rgba(0,0,0,.015) 12%,rgba(0,0,0,.05) 22%,rgba(0,0,0,.13) 32%,rgba(0,0,0,.28) 43%,rgba(0,0,0,.48) 54%,rgba(0,0,0,.72) 64%,#000 74%,#000 88%,transparent 100%)!important;
+   -webkit-mask-composite:source-in!important;
+ }
+ .ref-action{
+   transform:scale(1.08)!important;
+ }
+}
