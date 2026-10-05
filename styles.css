@@ -1094,3 +1094,41 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
 @media(max-width:900px){
  .interior-ref-nav .interior-home{position:relative!important;left:auto!important;top:auto!important;transform:none!important;justify-self:center!important;margin:0 0 4px!important}
 }
+
+/* 2026-10-05: interior header geometry mirrors homepage exactly */
+@media(min-width:901px){
+ .interior-ref-nav{
+   width:calc(100% - 48px)!important;
+   margin:4px 24px 0!important;
+   border-radius:18px 18px 0 0!important;
+   height:74px!important;
+   min-height:74px!important;
+   max-height:74px!important;
+   background:rgba(250,246,239,.76)!important;
+   box-sizing:border-box!important;
+ }
+ .interior-ref-nav nav{
+   gap:58px!important;
+   transform:none!important;
+ }
+ .interior-ref-nav nav a{
+   font:600 18px/1 Manrope,Arial,sans-serif!important;
+   letter-spacing:.20em!important;
+ }
+ .interior-ref-nav nav a.active:after{bottom:-22px!important}
+ .interior-ref-nav nav .recruit-nav{
+   padding:14px 21px!important;
+   letter-spacing:.16em!important;
+ }
+ .interior-ref-nav .interior-home{
+   left:38px!important;
+   font-size:0!important;
+   letter-spacing:0!important;
+   gap:0!important;
+ }
+ .interior-ref-nav .interior-home .home-arrow{
+   font-size:20px!important;
+   color:#071d33!important;
+ }
+ .interior-ref-nav .interior-home span:last-child{display:none!important}
+}
