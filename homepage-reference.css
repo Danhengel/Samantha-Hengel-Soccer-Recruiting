@@ -454,3 +454,11 @@ body.ref-home{
    object-position:center bottom!important;
  }
 }
+
+/* 2026-10-05: increase Samantha action-photo visibility without restoring hard seams */
+@media(min-width:901px){
+ .ref-action{
+   opacity:.84!important;
+   filter:saturate(.72) contrast(.96) brightness(1.03)!important;
+ }
+}
