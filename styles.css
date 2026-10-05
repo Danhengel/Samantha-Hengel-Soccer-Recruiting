@@ -1080,3 +1080,17 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
  .interior-ref-nav nav .recruit-nav{padding:7px 9px!important}
  .interior-ref-nav>.mobile-media-links{display:flex!important}
 }
+
+/* 2026-10-05: subtle home return on interior headers */
+.interior-ref-nav .interior-home{
+ display:flex!important;position:absolute!important;left:clamp(20px,3vw,52px)!important;top:50%!important;
+ transform:translateY(-50%)!important;align-items:center!important;gap:8px!important;
+ width:auto!important;height:auto!important;border:0!important;
+ color:#071d33!important;text-decoration:none!important;text-transform:uppercase!important;
+ font:700 10px/1 Manrope,Arial,sans-serif!important;letter-spacing:.16em!important;
+}
+.interior-ref-nav .interior-home .home-arrow{font-size:15px;line-height:1;font-weight:400}
+.interior-ref-nav .interior-home:hover{opacity:.62}
+@media(max-width:900px){
+ .interior-ref-nav .interior-home{position:relative!important;left:auto!important;top:auto!important;transform:none!important;justify-self:center!important;margin:0 0 4px!important}
+}
