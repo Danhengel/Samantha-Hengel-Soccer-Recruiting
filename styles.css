@@ -1806,3 +1806,39 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    display:none!important;
  }
 }
+
+/* 2026-10-05: fade academics section edges into surrounding page; remove visible vertical seam */
+@media(min-width:901px){
+ .academics-page .academic-photo-hero{
+   position:relative!important;
+   background:
+     linear-gradient(90deg,
+       #faf4ea 0%,
+       rgba(250,244,234,.72) 3%,
+       rgba(250,244,234,0) 8%,
+       rgba(250,244,234,0) 92%,
+       rgba(250,244,234,.72) 97%,
+       #faf4ea 100%),
+     linear-gradient(110deg,#faf4ea 0%,#efe4d6 55%,#dbc5a8 100%)!important;
+   border-left:0!important;
+   border-right:0!important;
+   box-shadow:none!important;
+ }
+ .academics-page .academic-photo-hero:after{
+   content:""!important;
+   position:absolute!important;
+   z-index:20!important;
+   top:0!important;bottom:0!important;
+   left:0!important;right:0!important;
+   pointer-events:none!important;
+   background:linear-gradient(90deg,
+     #faf4ea 0%,
+     rgba(250,244,234,.78) 1.5%,
+     rgba(250,244,234,.36) 3.5%,
+     transparent 7%,
+     transparent 93%,
+     rgba(250,244,234,.36) 96.5%,
+     rgba(250,244,234,.78) 98.5%,
+     #faf4ea 100%)!important;
+ }
+}
