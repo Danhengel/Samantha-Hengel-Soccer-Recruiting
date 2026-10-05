@@ -2309,3 +2309,13 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    color:#faf4ea!important;
  }
 }
+
+/* 2026-10-05: give Recruit Samantha the same subtle movement as SH Home */
+@media(min-width:901px){
+ .interior-ref-nav nav .recruit-nav{
+   transition:transform .2s ease,background .2s ease,border-color .2s ease,color .2s ease!important;
+ }
+ .interior-ref-nav nav .recruit-nav:hover{
+   transform:translateX(2px)!important;
+ }
+}
