@@ -2228,3 +2228,43 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    filter:saturate(.88) contrast(1.02)!important;
  }
 }
+
+/* 2026-10-05: premium back-home control on interior desktop pages */
+@media(min-width:901px){
+ .interior-ref-nav .interior-home{
+   left:32px!important;
+   width:auto!important;
+   height:36px!important;
+   padding:0 14px 0 11px!important;
+   display:flex!important;
+   align-items:center!important;
+   gap:9px!important;
+   border:1px solid rgba(7,29,51,.16)!important;
+   border-radius:999px!important;
+   background:rgba(250,244,234,.68)!important;
+   box-shadow:0 5px 18px rgba(7,29,51,.045)!important;
+   font:600 10px/1 Manrope,Arial,sans-serif!important;
+   letter-spacing:.15em!important;
+   text-transform:uppercase!important;
+   color:#071d33!important;
+   transition:transform .2s ease,background .2s ease,border-color .2s ease!important;
+ }
+ .interior-ref-nav .interior-home .home-arrow{
+   font-size:17px!important;
+   line-height:1!important;
+   color:#9e7b57!important;
+   transition:transform .2s ease!important;
+ }
+ .interior-ref-nav .interior-home span:last-child{
+   display:inline!important;
+   font-size:10px!important;
+ }
+ .interior-ref-nav .interior-home:hover{
+   transform:translateX(-2px)!important;
+   background:#faf4ea!important;
+   border-color:rgba(158,123,87,.45)!important;
+ }
+ .interior-ref-nav .interior-home:hover .home-arrow{
+   transform:translateX(-3px)!important;
+ }
+}
