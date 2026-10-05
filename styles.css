@@ -1696,3 +1696,29 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    align-self:center!important;
  }
 }
+
+/* 2026-10-05: center academics image on the page, balance copy around it */
+@media(min-width:901px){
+ .academics-page .academic-photo-hero{
+   grid-template-columns:minmax(0,1fr) minmax(300px,34%) minmax(0,1fr)!important;
+   gap:clamp(20px,2.2vw,38px)!important;
+ }
+ .academics-page .academic-action-photo{
+   grid-column:2!important;
+   justify-self:center!important;
+   width:100%!important;
+   max-width:460px!important;
+ }
+ .academics-page .academic-hero-copy{
+   grid-column:1!important;
+   justify-self:end!important;
+   width:100%!important;
+   max-width:470px!important;
+ }
+ .academics-page .academic-overlay-story{
+   grid-column:3!important;
+   justify-self:start!important;
+   width:100%!important;
+   max-width:500px!important;
+ }
+}
