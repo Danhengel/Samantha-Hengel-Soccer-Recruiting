@@ -1325,3 +1325,17 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    height:110%!important;
  }
 }
+
+/* 2026-10-05: profile portrait — top aligned, bottom just below action buttons */
+@media(min-width:901px){
+ .profile-page .intro-photo{
+   transform:translateY(-8%)!important;
+   height:96%!important;
+   align-self:start!important;
+ }
+ .profile-page .intro-photo img{
+   height:100%!important;
+   object-fit:contain!important;
+   object-position:center top!important;
+ }
+}
