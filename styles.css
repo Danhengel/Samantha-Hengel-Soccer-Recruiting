@@ -2116,3 +2116,11 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    max-width:100%!important;
  }
 }
+
+/* 2026-10-05: align left academics block start with right-side block */
+@media(min-width:901px){
+ .academics-page .academic-hero-copy{
+   align-self:center!important;
+   transform:translateY(116px)!important;
+ }
+}
