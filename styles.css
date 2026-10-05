@@ -1190,3 +1190,38 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    margin:0!important;
  }
 }
+
+/* 2026-10-05: profile page aligned to homepage pearl editorial system */
+@media(min-width:901px){
+ .profile-page .profile-feature{
+   height:100%!important;min-height:0!important;
+   grid-template-columns:.92fr 1.08fr!important;
+   gap:clamp(42px,5vw,76px)!important;
+   padding:clamp(34px,4vh,54px) clamp(42px,4.8vw,72px)!important;
+   background:
+     radial-gradient(circle at 82% 12%,rgba(255,250,239,.95) 0%,rgba(255,249,237,.48) 22%,transparent 42%),
+     linear-gradient(110deg,#faf4ea 0%,#efe4d6 55%,#dbc5a8 100%)!important;
+   color:#071d33!important;box-shadow:none!important;
+ }
+ .profile-page .intro-photo{
+   height:min(62vh,590px)!important;align-self:end!important;overflow:visible!important;
+   display:flex!important;align-items:flex-end!important;justify-content:center!important;
+ }
+ .profile-page .intro-photo img{
+   width:100%!important;height:100%!important;object-fit:contain!important;object-position:center bottom!important;
+   filter:saturate(.9) contrast(.97) brightness(1.02)!important;
+ }
+ .profile-page .profile-overview{max-width:620px!important}
+ .profile-page .profile-overview .kicker{color:#9e7b57!important}
+ .profile-page .profile-overview h1{color:#071d33!important;font-size:clamp(50px,4.5vw,72px)!important}
+ .profile-page .profile-overview h1 em{color:#a47d56!important;-webkit-text-stroke:0!important}
+ .profile-page .profile-overview>p:not(.kicker){color:#435568!important;line-height:1.72!important;margin:18px 0 22px!important}
+ .profile-page .traits{border-top:1px solid rgba(7,29,51,.14)!important}
+ .profile-page .traits>div{border-bottom:1px solid rgba(7,29,51,.14)!important;padding:12px 0!important}
+ .profile-page .traits dt{color:#a47d56!important}
+ .profile-page .traits strong{color:#071d33!important;font-size:20px!important}
+ .profile-page .traits span{color:#5b6a78!important}
+ .profile-page .actions{margin-top:18px!important}
+ .profile-page .button{background:#071d33!important;color:#fff!important}
+ .profile-page .text-link{color:#071d33!important;border-color:rgba(7,29,51,.24)!important}
+}
