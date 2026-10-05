@@ -1878,3 +1878,26 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    z-index:1!important;
  }
 }
+
+/* 2026-10-05: eliminate remaining academics vertical strip/seam */
+@media(min-width:901px){
+ .academics-page>main:after{
+   content:none!important;
+   display:none!important;
+   background:none!important;
+ }
+ .academics-page,
+ .academics-page>main,
+ .academics-page .academic-photo-hero,
+ .academics-page .academic-hero-copy,
+ .academics-page .academic-overlay-story{
+   background-color:#faf4ea!important;
+   background-image:none!important;
+ }
+ .academics-page .academic-photo-hero{
+   margin:0!important;
+   border:0!important;
+   outline:0!important;
+   box-shadow:none!important;
+ }
+}
