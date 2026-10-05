@@ -2050,3 +2050,37 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
  .academics-page .academic-action-photo{grid-column:2!important}
  .academics-page .academic-overlay-story{grid-column:3!important}
 }
+
+/* 2026-10-05: restore balanced academics proportions after over-centering */
+@media(min-width:901px){
+ .academics-page .academic-photo-hero{
+   display:grid!important;
+   grid-template-columns:minmax(360px,470px) minmax(360px,470px) minmax(420px,500px)!important;
+   column-gap:clamp(28px,3vw,52px)!important;
+   justify-content:center!important;
+   align-items:center!important;
+   padding:0 clamp(36px,4vw,72px)!important;
+ }
+ .academics-page .academic-hero-copy{
+   grid-column:1!important;
+   width:100%!important;
+   max-width:470px!important;
+   justify-self:end!important;
+   padding:0!important;
+ }
+ .academics-page .academic-hero-copy>p:not(.kicker){
+   max-width:430px!important;
+ }
+ .academics-page .academic-action-photo{
+   grid-column:2!important;
+   width:100%!important;
+   max-width:470px!important;
+   justify-self:center!important;
+ }
+ .academics-page .academic-overlay-story{
+   grid-column:3!important;
+   width:100%!important;
+   max-width:500px!important;
+   justify-self:start!important;
+ }
+}
