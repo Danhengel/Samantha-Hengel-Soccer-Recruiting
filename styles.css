@@ -1439,3 +1439,13 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
  }
  .profile-page .profile-feature>*{position:relative!important;z-index:1!important}
 }
+
+/* 2026-10-05: featured YouTube highlight film */
+.film-hero-video .film-youtube-embed{
+ display:block;
+ width:100%;
+ aspect-ratio:16/9;
+ height:auto;
+ border:0;
+ background:#071d33;
+}
