@@ -2326,3 +2326,39 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    transform:translateY(4px)!important;
  }
 }
+
+/* 2026-10-05: make SH Home and Recruit Samantha true matching header controls */
+@media(min-width:901px){
+ .interior-ref-nav .interior-home,
+ .interior-ref-nav nav .recruit-nav{
+   box-sizing:border-box!important;
+   height:44px!important;
+   min-height:44px!important;
+   padding:0 18px!important;
+   border:1px solid #071d33!important;
+   border-radius:0!important;
+   background:transparent!important;
+   box-shadow:none!important;
+   display:flex!important;
+   align-items:center!important;
+   justify-content:center!important;
+   transition:transform .2s ease,background .2s ease,border-color .2s ease,color .2s ease!important;
+ }
+ .interior-ref-nav .interior-home{
+   gap:9px!important;
+ }
+ .interior-ref-nav nav .recruit-nav{
+   line-height:1!important;
+ }
+ .interior-ref-nav .interior-home:hover,
+ .interior-ref-nav nav .recruit-nav:hover{
+   transform:translateY(4px)!important;
+   background:#071d33!important;
+   border-color:#071d33!important;
+ }
+ .interior-ref-nav .interior-home:hover .home-arrow,
+ .interior-ref-nav .interior-home:hover span:last-child::after,
+ .interior-ref-nav nav .recruit-nav:hover{
+   color:#faf4ea!important;
+ }
+}
