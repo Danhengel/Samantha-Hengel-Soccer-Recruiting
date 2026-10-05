@@ -903,3 +903,12 @@ body:not(.home-page) .site-header{border-bottom:0!important}
   }
   .profile-page .site-header nav a.active[href="profile.html"]:after{display:none}
 }
+
+
+/* 2026-10-04: center top navigation tabs on mobile */
+@media(max-width:900px){
+  .site-header nav{
+    justify-content:center;
+    text-align:center;
+  }
+}
