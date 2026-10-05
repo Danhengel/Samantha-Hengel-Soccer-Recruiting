@@ -2026,3 +2026,27 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    max-width:470px!important;
  }
 }
+
+/* 2026-10-05: optically center academics three-column group in full viewport */
+@media(min-width:901px){
+ .academics-page .academic-photo-hero{
+   display:grid!important;
+   grid-template-columns:320px 360px 420px!important;
+   column-gap:54px!important;
+   justify-content:center!important;
+   align-items:center!important;
+   padding-left:0!important;
+   padding-right:0!important;
+ }
+ .academics-page .academic-hero-copy,
+ .academics-page .academic-action-photo,
+ .academics-page .academic-overlay-story{
+   margin:0!important;
+   justify-self:stretch!important;
+   max-width:none!important;
+   width:100%!important;
+ }
+ .academics-page .academic-hero-copy{grid-column:1!important}
+ .academics-page .academic-action-photo{grid-column:2!important}
+ .academics-page .academic-overlay-story{grid-column:3!important}
+}
