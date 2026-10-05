@@ -1004,3 +1004,26 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
  .ref-shell>.recruiting-footer{margin-top:18px}
  .recruiting-footer{position:relative!important;inset:auto!important}
 }
+
+/* 2026-10-05: single-screen desktop pages */
+@media(min-width:901px){
+ html,body{height:100%;overflow:hidden}
+ body{min-height:100vh;height:100vh}
+ body>main{min-height:0;overflow:hidden}
+ body>.recruiting-footer{flex:0 0 auto}
+ .profile-page main,.film-page main,.academics-page main{display:flex;min-height:0}
+ .profile-page main>section,.film-page main>section,.academics-page main>section{min-height:0}
+ .profile-feature,.film-hero,.academic-hero{min-height:0!important;height:100%!important;overflow:hidden}
+ .profile-feature{padding-top:clamp(28px,4vh,58px)!important;padding-bottom:clamp(28px,4vh,58px)!important}
+ .film-hero-copy{padding-top:clamp(28px,4vh,58px)!important;padding-bottom:clamp(28px,4vh,58px)!important;overflow:auto;scrollbar-width:none}
+ .film-hero-copy::-webkit-scrollbar{display:none}
+ .film-hero-video{padding-top:28px!important;padding-bottom:28px!important}
+ .film-hero-video video{max-height:min(48vh,520px)!important}
+ .academic-hero{padding-top:clamp(28px,4vh,58px)!important;padding-bottom:clamp(28px,4vh,58px)!important}
+ .schedule-layout{padding-top:clamp(28px,4vh,58px)!important;padding-bottom:clamp(28px,4vh,58px)!important}
+ .next-panel{display:none!important}
+ .coach-references{display:none!important}
+ body:has(.ref-shell){height:100vh;overflow:hidden}
+ .ref-shell{height:calc(100vh - 0px)!important;min-height:0!important;overflow:hidden!important}
+ .ref-shell>.recruiting-footer{position:absolute!important;left:0!important;right:0!important;bottom:0!important;margin:0!important}
+}
