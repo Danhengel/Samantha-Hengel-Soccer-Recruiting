@@ -2268,3 +2268,25 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    transform:translateX(-3px)!important;
  }
 }
+
+/* 2026-10-05: branded SH HOME interior return control */
+@media(min-width:901px){
+ .interior-ref-nav .interior-home span:last-child{
+   display:inline!important;
+   font-size:0!important;
+ }
+ .interior-ref-nav .interior-home span:last-child::before{
+   content:"SH"!important;
+   margin-right:6px!important;
+   color:#9e7b57!important;
+   font:600 15px/1 "Cormorant Garamond",serif!important;
+   letter-spacing:.04em!important;
+   text-transform:none!important;
+ }
+ .interior-ref-nav .interior-home span:last-child::after{
+   content:"HOME"!important;
+   color:#071d33!important;
+   font:600 9px/1 Manrope,Arial,sans-serif!important;
+   letter-spacing:.16em!important;
+ }
+}
