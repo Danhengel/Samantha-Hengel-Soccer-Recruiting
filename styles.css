@@ -1493,3 +1493,49 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    box-shadow:none!important;
  }
 }
+
+/* 2026-10-05: compact desktop schedule hero — remove dead space above fixtures */
+@media(min-width:901px){
+ body:has(.schedule-hero)>main{
+   display:grid!important;
+   grid-template-rows:auto minmax(0,1fr)!important;
+   align-content:start!important;
+   overflow:hidden!important;
+ }
+ .schedule-hero{
+   min-height:0!important;
+   height:auto!important;
+   padding:18px 28px 12px!important;
+   display:grid!important;
+   grid-template-columns:minmax(0,1fr) auto!important;
+   grid-template-rows:auto auto!important;
+   column-gap:32px!important;
+   align-items:end!important;
+ }
+ .schedule-hero .kicker,
+ .schedule-hero .type-hero-number{display:none!important}
+ .schedule-hero h1{
+   grid-column:1!important;
+   grid-row:1!important;
+   margin:0!important;
+   font-size:clamp(48px,4.4vw,70px)!important;
+   line-height:.82!important;
+ }
+ .schedule-hero h1 br{display:none!important}
+ .schedule-hero>p:not(.kicker){
+   grid-column:1!important;
+   grid-row:2!important;
+   max-width:none!important;
+   margin:12px 0 0!important;
+   font-size:18px!important;
+   line-height:1.45!important;
+ }
+ .schedule-layout{
+   min-height:0!important;
+   margin:0!important;
+   padding:12px 28px 18px!important;
+   align-self:start!important;
+ }
+ .schedule-controls{margin-top:0!important}
+ .next-panel{display:none!important}
+}
