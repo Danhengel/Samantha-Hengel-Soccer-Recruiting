@@ -470,3 +470,11 @@ body.ref-home{
    filter:saturate(.86) contrast(1.01) brightness(1.01)!important;
  }
 }
+
+/* 2026-10-05: shift homepage identity copy right to use negative space */
+@media(min-width:901px){
+ .ref-copy{
+   left:7.2%!important;
+   width:39.5%!important;
+ }
+}
