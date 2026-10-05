@@ -2379,3 +2379,13 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    transform:translateY(4px)!important;
  }
 }
+
+/* 2026-10-05: increase matching header-button drop to 10px */
+@media(min-width:901px){
+ .interior-ref-nav .interior-home:hover{
+   transform:translateY(calc(-50% + 10px))!important;
+ }
+ .interior-ref-nav nav .recruit-nav:hover{
+   transform:translateY(10px)!important;
+ }
+}
