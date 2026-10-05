@@ -311,3 +311,11 @@ body.ref-home{
   .ref-title{height:150px!important;overflow:visible!important}
   .ref-first{display:block!important;line-height:1!important;overflow:visible!important}
 }
+
+
+/* 2026-10-04: tighten mobile space between video links and hero copy */
+@media(max-width:900px){
+  .ref-nav{min-height:128px!important;padding-bottom:4px!important}
+  .ref-nav .mobile-media-links{padding:0 0 3px!important}
+  .ref-copy{top:134px!important}
+}
