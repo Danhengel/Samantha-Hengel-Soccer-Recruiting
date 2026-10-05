@@ -302,3 +302,12 @@ body.ref-home{
   .ref-nav nav{order:1!important;width:100%!important}
   .ref-nav .mobile-media-links{order:2!important;margin-top:0!important;padding:2px 0 8px!important}
 }
+
+
+/* 2026-10-04: keep Samantha's full first name clear of taller mobile navigation */
+@media(max-width:900px){
+  .ref-nav{min-height:142px!important;padding-top:50px!important;padding-bottom:8px!important}
+  .ref-copy{top:156px!important}
+  .ref-title{height:150px!important;overflow:visible!important}
+  .ref-first{display:block!important;line-height:1!important;overflow:visible!important}
+}
