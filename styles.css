@@ -1408,3 +1408,34 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
      linear-gradient(110deg,#faf4ea 0%,#efe4d6 55%,#dbc5a8 100%)!important;
  }
 }
+
+/* 2026-10-05: true continuous profile/header canvas — overlap removes 1px rendering seam */
+@media(min-width:901px){
+ .profile-page>.interior-ref-nav{
+   z-index:30!important;
+   margin-bottom:-2px!important;
+   padding-bottom:2px!important;
+   background:linear-gradient(110deg,#faf4ea 0%,#f8f0e5 55%,#f4e8d9 100%)!important;
+ }
+ .profile-page>main{
+   position:relative!important;
+   z-index:1!important;
+   margin-top:-2px!important;
+   padding-top:2px!important;
+   background:linear-gradient(110deg,#faf4ea 0%,#efe4d6 55%,#dbc5a8 100%)!important;
+ }
+ .profile-page .profile-feature{
+   position:relative!important;
+   margin-top:-1px!important;
+   padding-top:calc(clamp(22px,2.5vh,38px) + 1px)!important;
+ }
+ .profile-page .profile-feature:before{
+   content:""!important;
+   position:absolute!important;
+   z-index:0!important;
+   left:0!important;right:0!important;top:-18px!important;height:42px!important;
+   pointer-events:none!important;
+   background:linear-gradient(180deg,#faf4ea 0%,rgba(250,244,234,.82) 40%,rgba(250,244,234,0) 100%)!important;
+ }
+ .profile-page .profile-feature>*{position:relative!important;z-index:1!important}
+}
