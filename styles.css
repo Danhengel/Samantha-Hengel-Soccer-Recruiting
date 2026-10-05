@@ -1306,3 +1306,14 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
  }
  .profile-page .intro-photo img{position:relative!important;z-index:1!important}
 }
+
+/* 2026-10-05: raise profile portrait to align with text block */
+@media(min-width:901px){
+ .profile-page .intro-photo{
+   transform:translateY(-4.5%)!important;
+   height:104.5%!important;
+ }
+ .profile-page .intro-photo img{
+   object-position:center top!important;
+ }
+}
