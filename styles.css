@@ -948,3 +948,11 @@ body:not(.home-page) .site-header{border-bottom:0!important}
   .site-header nav{grid-column:1!important;grid-row:2!important;order:2!important}
   .site-header .mobile-media-links{grid-column:1!important;grid-row:3!important;order:3!important;margin-top:-2px!important;padding:0 0 9px!important}
 }
+
+
+/* 2026-10-04: recruiting contact links visible on desktop and mobile */
+.site-header .mobile-media-links{display:flex;grid-column:1/-1;justify-content:center;align-items:center;gap:18px;width:100%;padding:6px 0 8px;background:rgba(3,21,37,.97)}
+.site-header .mobile-media-links a{font-family:Manrope,sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c7a47d;text-decoration:none;white-space:nowrap}
+.site-header .mobile-media-links a:hover{color:#f3eee6}
+@media(min-width:901px){.site-header{height:auto;min-height:76px;grid-template-rows:76px auto}.site-header .brand{grid-row:1}.site-header nav{grid-row:1}.site-header .mobile-media-links{grid-row:2;padding:5px 0 7px;border-top:1px solid rgba(243,238,230,.08)}}
+@media(max-width:900px){.site-header .mobile-media-links{display:flex!important;flex-wrap:wrap!important;gap:4px 16px!important;padding:2px 0 8px!important}.site-header .mobile-media-links a{font-size:9px!important}}
