@@ -1449,3 +1449,47 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
  border:0;
  background:#071d33;
 }
+
+/* 2026-10-05: universal seamless header-to-page blend */
+@media(min-width:901px){
+ body:not(.ref-home)>.interior-ref-nav{
+   position:relative!important;
+   z-index:30!important;
+   margin-bottom:-2px!important;
+   padding-bottom:2px!important;
+   border:0!important;
+   border-bottom:0!important;
+   box-shadow:none!important;
+   backdrop-filter:none!important;
+   -webkit-backdrop-filter:none!important;
+   background:#faf4ea!important;
+ }
+ body:not(.ref-home)>.interior-ref-nav:after{
+   content:""!important;
+   display:block!important;
+   position:absolute!important;
+   left:0!important;
+   right:0!important;
+   top:calc(100% - 2px)!important;
+   height:44px!important;
+   pointer-events:none!important;
+   z-index:-1!important;
+   background:linear-gradient(180deg,
+     #faf4ea 0%,
+     rgba(250,244,234,.92) 18%,
+     rgba(250,244,234,.68) 46%,
+     rgba(250,244,234,.28) 72%,
+     rgba(250,244,234,0) 100%)!important;
+ }
+ body:not(.ref-home)>main{
+   position:relative!important;
+   z-index:1!important;
+   margin-top:-2px!important;
+   border-top:0!important;
+   box-shadow:none!important;
+ }
+ body:not(.ref-home)>main>section:first-child{
+   border-top:0!important;
+   box-shadow:none!important;
+ }
+}
