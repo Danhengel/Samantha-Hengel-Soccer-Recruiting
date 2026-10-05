@@ -1339,3 +1339,12 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    object-position:center top!important;
  }
 }
+
+/* 2026-10-05: lower profile portrait so its bottom aligns just below Film button */
+@media(min-width:901px){
+ .profile-page .intro-photo{
+   transform:translateY(-3%)!important;
+   height:91%!important;
+   align-self:start!important;
+ }
+}
