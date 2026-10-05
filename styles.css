@@ -1995,3 +1995,34 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    overflow:hidden!important;
  }
 }
+
+/* 2026-10-05: center the complete academics composition */
+@media(min-width:901px){
+ body.academics-page{
+   padding-left:32px!important;
+   padding-right:32px!important;
+ }
+ .academics-page .academic-photo-hero{
+   grid-template-columns:minmax(0,1fr) minmax(300px,34%) minmax(0,1fr)!important;
+   gap:clamp(20px,2.2vw,38px)!important;
+   justify-content:center!important;
+   align-items:center!important;
+   padding-left:clamp(28px,3.5vw,58px)!important;
+   padding-right:clamp(28px,3.5vw,58px)!important;
+ }
+ .academics-page .academic-hero-copy{
+   justify-self:end!important;
+   width:100%!important;
+   max-width:470px!important;
+ }
+ .academics-page .academic-action-photo{
+   justify-self:center!important;
+   width:100%!important;
+   max-width:460px!important;
+ }
+ .academics-page .academic-overlay-story{
+   justify-self:start!important;
+   width:100%!important;
+   max-width:470px!important;
+ }
+}
