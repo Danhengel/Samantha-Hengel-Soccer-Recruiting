@@ -441,3 +441,16 @@ body.ref-home{
    transform:scale(1.08)!important;
  }
 }
+
+/* 2026-10-05: restore full-body framing while retaining seamless top/left blend */
+@media(min-width:901px){
+ .ref-action-wrap{
+   top:12%!important;
+   height:76%!important;
+ }
+ .ref-action{
+   transform:none!important;
+   object-fit:contain!important;
+   object-position:center bottom!important;
+ }
+}
