@@ -1348,3 +1348,12 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    align-self:start!important;
  }
 }
+
+/* 2026-10-05: lower profile portrait by the same increment again */
+@media(min-width:901px){
+ .profile-page .intro-photo{
+   transform:translateY(2%)!important;
+   height:86%!important;
+   align-self:start!important;
+ }
+}
