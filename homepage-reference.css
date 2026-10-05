@@ -359,3 +359,12 @@ body.ref-home{
   .ref-nav .mobile-media-links a{font-size:9px!important;line-height:20px!important}
   .ref-copy{top:88px!important}
 }
+
+
+/* 2026-10-04: desktop hero action photo — soften hard top edge into pearl background */
+@media(min-width:901px){
+  .ref-action-wrap{
+    -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.12) 4%,rgba(0,0,0,.55) 11%,#000 22%,#000 86%,transparent 100%)!important;
+    mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.12) 4%,rgba(0,0,0,.55) 11%,#000 22%,#000 86%,transparent 100%)!important;
+  }
+}
