@@ -1932,3 +1932,24 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
      rgba(250,244,234,0) 100%)!important;
  }
 }
+
+/* 2026-10-05: remove darker academics strip and use one uniform pearl canvas */
+@media(min-width:901px){
+ .academics-page,
+ .academics-page>main,
+ .academics-page .academic-photo-hero,
+ .academics-page .academic-hero-copy,
+ .academics-page .academic-overlay-story{
+   background:#faf4ea!important;
+   background-color:#faf4ea!important;
+   background-image:none!important;
+ }
+ .academics-page .academic-photo-hero::before,
+ .academics-page .academic-photo-hero::after,
+ .academics-page>main::before,
+ .academics-page>main::after{
+   content:none!important;
+   display:none!important;
+   background:none!important;
+ }
+}
