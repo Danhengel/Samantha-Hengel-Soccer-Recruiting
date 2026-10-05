@@ -511,3 +511,8 @@ body.ref-home{
    opacity:.88!important;
  }
 }
+
+/* 2026-10-05: soften homepage action shot one more step */
+@media(min-width:901px){
+ .ref-action{opacity:.82!important}
+}
