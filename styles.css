@@ -1722,3 +1722,11 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    max-width:500px!important;
  }
 }
+
+/* 2026-10-05: center Samantha within the academics photo frame */
+@media(min-width:901px){
+ .academics-page .academic-action-photo img{
+   object-fit:cover!important;
+   object-position:50% 34%!important;
+ }
+}
