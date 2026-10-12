@@ -1,0 +1,116 @@
+/* One mobile header layout for the homepage and every interior page. */
+@media (max-width:900px) {
+  .ref-nav,
+  .interior-ref-nav {
+    position:relative!important;
+    top:auto!important;
+    left:auto!important;
+    right:auto!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    margin:0!important;
+    padding:10px 14px 8px!important;
+    gap:0!important;
+    border:0!important;
+    border-bottom:1px solid rgba(7,29,51,.09)!important;
+    border-radius:0!important;
+    background:rgba(250,246,239,.94)!important;
+    color:#071d33!important;
+    backdrop-filter:blur(7px)!important;
+    box-shadow:none!important;
+    z-index:40!important;
+  }
+  .interior-ref-nav .interior-home {display:none!important}
+  .ref-nav nav,
+  .interior-ref-nav nav {
+    display:flex!important;
+    flex-wrap:wrap!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:100%!important;
+    max-width:480px!important;
+    height:auto!important;
+    gap:0 9px!important;
+    margin:0!important;
+    padding:0!important;
+    transform:none!important;
+    overflow:visible!important;
+  }
+  .ref-nav nav a,
+  .ref-nav nav a[href="profile.html"],
+  .interior-ref-nav nav a {
+    position:relative!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    flex:none!important;
+    min-height:44px!important;
+    margin:0!important;
+    padding:9px 6px!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    color:#071d33!important;
+    font:800 11px/1.2 Manrope,Arial,sans-serif!important;
+    letter-spacing:.07em!important;
+    text-transform:uppercase!important;
+    white-space:nowrap!important;
+    text-decoration:none!important;
+    opacity:1!important;
+  }
+  .ref-nav nav a.active:after,
+  .interior-ref-nav nav a.active:after {display:none!important}
+  .ref-nav nav .recruit-nav,
+  .interior-ref-nav nav .recruit-nav {
+    min-height:38px!important;
+    margin:3px 0!important;
+    padding:7px 10px!important;
+    border:1px solid rgba(7,29,51,.45)!important;
+    letter-spacing:.07em!important;
+  }
+  .ref-nav .mobile-media-links,
+  .interior-ref-nav > .mobile-media-links {
+    position:static!important;
+    display:flex!important;
+    flex-wrap:wrap!important;
+    align-items:center!important;
+    justify-content:center!important;
+    grid-row:auto!important;
+    order:2!important;
+    width:100%!important;
+    height:auto!important;
+    gap:0 12px!important;
+    margin:0!important;
+    padding:0!important;
+    background:transparent!important;
+    backdrop-filter:none!important;
+  }
+  .ref-nav .mobile-media-links a,
+  .interior-ref-nav > .mobile-media-links a {
+    display:inline-flex!important;
+    align-items:center!important;
+    min-height:30px!important;
+    padding:0!important;
+    color:#9e7b57!important;
+    font:700 10px/1.2 Manrope,Arial,sans-serif!important;
+    letter-spacing:.07em!important;
+    text-transform:uppercase!important;
+    white-space:nowrap!important;
+    text-decoration:none!important;
+  }
+  .ref-nav a:focus-visible,
+  .interior-ref-nav a:focus-visible {outline:2px solid #9e7b57;outline-offset:2px}
+}
+@media (max-width:360px) {
+  .ref-nav nav,
+  .interior-ref-nav nav {gap:0 5px!important}
+  .ref-nav nav a,
+  .ref-nav nav a[href="profile.html"],
+  .interior-ref-nav nav a {font-size:10px!important;padding:8px 4px!important}
+}
