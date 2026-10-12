@@ -83,3 +83,54 @@
     text-transform:uppercase!important;
   }
 }
+
+/* One consistent footer treatment across the homepage and interior pages. */
+@media(min-width:901px){
+ body .recruiting-footer,body .ref-shell>.recruiting-footer{
+  position:relative!important;inset:auto!important;transform:none!important;
+  display:flex!important;flex-wrap:wrap!important;
+  justify-content:center!important;align-items:center!important;
+  gap:10px 22px!important;
+  width:100%!important;max-width:none!important;
+  height:auto!important;min-height:52px!important;
+  margin:0!important;padding:12px 24px!important;
+  background:#f8f1e7!important;color:#071d33!important;
+  border-top:1px solid rgba(7,29,51,.12)!important;
+  text-align:center!important;box-sizing:border-box!important;
+ }
+ body .recruiting-footer .recruiting-footer-identity,
+ body .ref-shell>.recruiting-footer .recruiting-footer-identity{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  gap:0!important;min-width:0!important;
+ }
+ body .recruiting-footer .recruiting-footer-identity span{
+  font:700 10px/1.5 Manrope,Arial,sans-serif!important;
+  letter-spacing:.05em!important;color:#64717c!important;text-transform:uppercase!important;
+ }
+ body .recruiting-footer .recruiting-footer-links{
+  display:flex!important;flex-wrap:wrap!important;align-items:center!important;
+  justify-content:center!important;gap:8px 16px!important;
+ }
+ body .recruiting-footer .recruiting-footer-links a{
+  color:#9e7b57!important;font:700 10px/1.5 Manrope,Arial,sans-serif!important;
+  text-transform:uppercase!important;text-decoration:none!important;
+ }
+ body .recruiting-footer>small{
+  color:#64717c!important;font:700 9px/1.5 Manrope,Arial,sans-serif!important;
+  letter-spacing:.04em!important;white-space:nowrap!important;
+ }
+}
+@media(max-width:900px){
+ body .recruiting-footer,body .ref-shell>.recruiting-footer{
+  position:relative!important;inset:auto!important;
+  width:100%!important;margin:0!important;
+  background:#f8f1e7!important;
+ }
+ body .recruiting-footer .recruiting-footer-links,
+ body .ref-shell>.recruiting-footer .recruiting-footer-links{
+  display:none!important;
+ }
+ body .recruiting-footer .recruiting-footer-identity strong:empty{
+  display:none!important;
+ }
+}
