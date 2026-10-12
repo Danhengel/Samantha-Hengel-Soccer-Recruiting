@@ -26,7 +26,31 @@
     box-shadow:none!important;
     z-index:40!important;
   }
-  .interior-ref-nav .interior-home {display:none!important}
+  .interior-ref-nav .interior-home {
+    position:relative!important;
+    display:inline-flex!important;
+    align-self:flex-start!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:7px!important;
+    min-height:36px!important;
+    width:auto!important;
+    margin:0 0 4px!important;
+    padding:0 11px!important;
+    transform:none!important;
+    border:1px solid rgba(7,29,51,.24)!important;
+    border-radius:0!important;
+    background:transparent!important;
+    color:#071d33!important;
+    font:700 10px/1 Manrope,Arial,sans-serif!important;
+    letter-spacing:.12em!important;
+    text-decoration:none!important;
+    text-transform:uppercase!important;
+  }
+  .interior-ref-nav .interior-home .home-arrow{font-size:16px!important;color:#9e7b57!important}
+  .interior-ref-nav .interior-home span:last-child{display:inline!important;font:700 10px/1 Manrope,Arial,sans-serif!important;letter-spacing:.12em!important}
+  .interior-ref-nav .interior-home span:last-child::before,
+  .interior-ref-nav .interior-home span:last-child::after{content:none!important}
   .ref-nav nav,
   .interior-ref-nav nav {
     display:flex!important;
