@@ -138,3 +138,29 @@
   .ref-nav nav a[href="profile.html"],
   .interior-ref-nav nav a {font-size:10px!important;padding:8px 4px!important}
 }
+
+/* Home joins the mobile navigation row on interior pages. */
+.interior-ref-nav nav .mobile-home-link{display:none!important}
+@media(max-width:900px){
+  .interior-ref-nav>.interior-home{display:none!important}
+  .interior-ref-nav nav .mobile-home-link{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:3px!important;
+    min-height:44px!important;
+    margin:0!important;
+    padding:9px 6px!important;
+    border:0!important;
+    background:transparent!important;
+    color:#071d33!important;
+    font:800 11px/1.2 Manrope,Arial,sans-serif!important;
+    letter-spacing:.07em!important;
+    text-transform:uppercase!important;
+    white-space:nowrap!important;
+  }
+  .interior-ref-nav nav .mobile-home-link span{color:#9e7b57!important;font-size:15px!important;line-height:1!important}
+}
+@media(max-width:360px){
+  .interior-ref-nav nav .mobile-home-link{font-size:10px!important;padding:8px 4px!important}
+}
