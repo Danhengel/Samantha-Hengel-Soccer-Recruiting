@@ -165,20 +165,3 @@
   .interior-ref-nav nav .mobile-home-link{font-size:10px!important;padding:8px 4px!important}
 }
 
-/* Keep the first mobile navigation line identical on every page. */
-@media(max-width:900px){
-  .ref-nav nav a[href="profile.html"],
-  .ref-nav nav a[href="soccer.html"],
-  .ref-nav nav a[href="schedule.html"]{order:0!important}
-  .ref-nav nav::before{
-    content:"";
-    display:block;
-    flex:0 0 100%;
-    width:100%;
-    height:0;
-    order:1;
-  }
-  .interior-ref-nav nav .mobile-home-link{order:2!important}
-  .ref-nav nav a[href="academics.html"]{order:3!important}
-  .ref-nav nav a[href="contact.html"]{order:4!important}
-}
