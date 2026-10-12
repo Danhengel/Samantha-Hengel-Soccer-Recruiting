@@ -817,3 +817,32 @@ body.ref-home{
   .ref-first{font-size:51px!important}
   .ref-last{font-size:60px!important}
 }
+
+
+/* 2026-10-12: player details sit inside the phone hero, beneath the class label */
+.ref-right .mobile-hero-details{display:none}
+@media (max-width:900px){
+  .ref-copy .ref-stats,.ref-copy .ref-facts{display:none!important}
+  .ref-copy{padding-bottom:0!important}
+  .ref-copy .ref-gold{margin-bottom:0}
+  .ref-right{height:clamp(340px,95vw,520px)!important}
+  .ref-right:before{
+    content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:linear-gradient(90deg,rgba(249,244,236,.98) 0%,rgba(249,244,236,.91) 34%,rgba(249,244,236,.62) 56%,transparent 85%);
+  }
+  .ref-right img{z-index:1;max-width:none;transform:translateX(14%)}
+  .ref-right .mobile-hero-details{
+    position:absolute;display:block;z-index:4;
+    top:clamp(22px,6vw,42px);left:22px;
+    width:58%;max-width:290px;color:#071d33;
+  }
+  .mobile-hero-details .ref-facts{display:grid!important;width:100%;margin-top:19px}
+  .mobile-hero-details .ref-fact,.mobile-hero-details .ref-fact span{
+    color:#071d33!important;text-shadow:0 1px 0 rgba(255,255,255,.4)!important;
+  }
+  .mobile-hero-details .ref-fact small{color:#24394d!important}
+}
+@media (max-width:360px){
+  .ref-right .mobile-hero-details{left:18px;width:62%}
+  .mobile-hero-details .ref-fact{font-size:9px!important;letter-spacing:.1em!important}
+}
