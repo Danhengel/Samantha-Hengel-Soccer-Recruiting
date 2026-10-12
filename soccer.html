@@ -59,7 +59,7 @@ body.film-page .film-game-archive{display:inline-block;margin-top:20px;color:#e7
 
 </main><footer class="recruiting-footer"><div class="recruiting-footer-identity"><strong><a href="index.html" aria-label="Samantha Hengel official soccer recruiting website">Samantha Hengel</a></strong><span>Class of 2028 · Defender · #2 · West Florida Flames GA ASPIRE</span></div><div class="recruiting-footer-links"><a href="mailto:samantha_hengel@icloud.com">Email</a><a href="https://www.instagram.com/samanthahengel2028/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.youtube.com/channel/UCl4u6jONmStWeXcWSa1Hk0g" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://live.veo.co/web-app/clubs/west-florida-flames-4/teams/2010-wff-dpl/" target="_blank" rel="noopener noreferrer">Veo</a><a href="https://my.sportsrecruits.com/athlete/samantha_hengel2" target="_blank" rel="noopener noreferrer">SportsRecruits</a></div><small>© 2026 Samantha Hengel</small></footer><script>
 (function(){
-  var source='https://raw.githubusercontent.com/Danhengel/Samantha-Hengel-Soccer-Recruiting/main/data/latest-game.json?updated='+Date.now();
+  var source='/api/latest-game';
   fetch(source,{cache:'no-store'}).then(function(response){if(!response.ok)throw new Error('Latest game unavailable');return response.json()}).then(function(game){
     var match=new URL(game.url), image=new URL(game.thumbnail);
     if(match.protocol!=='https:'||match.hostname!=='app.veo.co'||!match.pathname.startsWith('/matches/')||image.protocol!=='https:'||image.hostname!=='c.veocdn.com'||!/^\d{4}-\d{2}-\d{2}$/.test(game.date)||typeof game.title!=='string')return;
