@@ -868,3 +868,41 @@ body.ref-home{
   flex:none!important;margin-top:0!important;
  }
 }
+
+/* Reserve visible room for the entire footer below the homepage hero. */
+@media(min-width:901px){
+ html:has(body.ref-home),body.ref-home{
+  height:auto!important;min-height:100vh!important;
+  overflow-x:hidden!important;overflow-y:auto!important;
+ }
+ body.ref-home .ref-shell{
+  height:auto!important;
+  min-height:100vh!important;
+  padding-bottom:0!important;
+  overflow:visible!important;
+ }
+ body.ref-home .ref-shell>.recruiting-footer{
+  position:relative!important;
+  left:auto!important;right:auto!important;bottom:auto!important;top:auto!important;
+  width:100%!important;height:auto!important;min-height:58px!important;
+  flex:0 0 auto!important;
+  padding:12px 24px!important;
+  margin-top:auto!important;
+  overflow:visible!important;
+  box-sizing:border-box!important;
+ }
+}
+@media(max-width:900px){
+ html:has(body.ref-home),body.ref-home{
+  height:auto!important;min-height:100vh!important;overflow-y:auto!important;
+ }
+ body.ref-home .ref-shell{
+  height:auto!important;min-height:100vh!important;
+  overflow:visible!important;padding-bottom:0!important;
+ }
+ body.ref-home .ref-shell>.recruiting-footer{
+  height:auto!important;min-height:0!important;
+  padding-bottom:calc(18px + env(safe-area-inset-bottom))!important;
+  overflow:visible!important;
+ }
+}
