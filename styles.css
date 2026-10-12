@@ -2464,3 +2464,36 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
    padding:14px 13px!important;
  }
 }
+
+/* 2026-10-12: one desktop canvas for all interior recruiting pages. */
+@media(min-width:901px){
+  body:not(.ref-home):not(.home-page){
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    max-width:none!important;
+    padding-left:32px!important;
+    padding-right:32px!important;
+    background:#faf4ea!important;
+    background-image:none!important;
+  }
+  body:not(.ref-home):not(.home-page)>.interior-ref-nav,
+  body:not(.ref-home):not(.home-page)>main,
+  body:not(.ref-home):not(.home-page)>.recruiting-footer{
+    width:100%!important;
+    max-width:none!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+  }
+  body:not(.ref-home):not(.home-page)>main,
+  body:not(.ref-home):not(.home-page)>main>section{
+    background:#faf4ea!important;
+    background-image:none!important;
+  }
+  body:not(.ref-home):not(.home-page)>main::before,
+  body:not(.ref-home):not(.home-page)>main::after,
+  .profile-page .profile-feature::before,
+  .film-page .film-hero::before{
+    content:none!important;
+    display:none!important;
+  }
+}
