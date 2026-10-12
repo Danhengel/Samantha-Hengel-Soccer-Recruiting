@@ -846,3 +846,25 @@ body.ref-home{
   .ref-right .mobile-hero-details{left:18px;width:62%}
   .mobile-hero-details .ref-fact{font-size:9px!important;letter-spacing:.1em!important}
 }
+
+/* Footer is a bottom section, never part of or over the header. */
+@media(min-width:901px){
+ body.ref-home .ref-shell{
+  display:flex!important;flex-direction:column!important;
+  min-height:100vh!important;height:auto!important;
+  overflow:visible!important;
+ }
+ body.ref-home .ref-shell>.recruiting-footer{
+  position:relative!important;
+  inset:auto!important;
+  flex:0 0 auto!important;
+  margin-top:auto!important;
+  z-index:30!important;
+ }
+}
+@media(max-width:900px){
+ body.ref-home .ref-shell>.recruiting-footer{
+  position:relative!important;inset:auto!important;
+  flex:none!important;margin-top:0!important;
+ }
+}
