@@ -17,7 +17,34 @@
     padding:8px 20px 58px!important;
   }
 }
-</style></head><body><header class="ref-nav interior-ref-nav"><a class="interior-home" href="index.html" aria-label="Back to Samantha Hengel homepage"><span class="home-arrow">←</span><span>Home</span></a><nav aria-label="Main navigation"><a href="profile.html">Profile</a><a href="soccer.html">Film</a><a class="active" href="schedule.html">Schedule</a><a href="academics.html">Academics</a><a class="recruit-nav" href="contact.html">Recruit Samantha</a></nav><div class="mobile-media-links" aria-label="Samantha's recruiting links"><a href="mailto:samantha_hengel@icloud.com">Email ↗</a><a href="https://www.youtube.com/channel/UCl4u6jONmStWeXcWSa1Hk0g" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://live.veo.co/web-app/clubs/west-florida-flames-4/teams/2010-wff-dpl/" target="_blank" rel="noopener noreferrer">Veo ↗</a><a href="https://www.instagram.com/samanthahengel2028/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></header><main>
+
+/* Match the Academics desktop canvas. */
+@media(min-width:901px){
+  body.schedule-page{
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    max-width:none!important;
+    padding-left:32px!important;
+    padding-right:32px!important;
+    background:#faf4ea!important;
+    background-image:none!important;
+  }
+  body.schedule-page>.interior-ref-nav,
+  body.schedule-page>main,
+  body.schedule-page>.recruiting-footer{
+    width:100%!important;
+    max-width:none!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+  }
+  body.schedule-page>main,
+  body.schedule-page .schedule-hero,
+  body.schedule-page .schedule-layout{
+    background:#faf4ea!important;
+    background-image:none!important;
+  }
+}
+</style></head><body class="schedule-page"><header class="ref-nav interior-ref-nav"><a class="interior-home" href="index.html" aria-label="Back to Samantha Hengel homepage"><span class="home-arrow">←</span><span>Home</span></a><nav aria-label="Main navigation"><a href="profile.html">Profile</a><a href="soccer.html">Film</a><a class="active" href="schedule.html">Schedule</a><a href="academics.html">Academics</a><a class="recruit-nav" href="contact.html">Recruit Samantha</a></nav><div class="mobile-media-links" aria-label="Samantha's recruiting links"><a href="mailto:samantha_hengel@icloud.com">Email ↗</a><a href="https://www.youtube.com/channel/UCl4u6jONmStWeXcWSa1Hk0g" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://live.veo.co/web-app/clubs/west-florida-flames-4/teams/2010-wff-dpl/" target="_blank" rel="noopener noreferrer">Veo ↗</a><a href="https://www.instagram.com/samanthahengel2028/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></header><main>
 <section class="type-hero schedule-hero"><p class="kicker">WEST FLORIDA FLAMES · LIVE CALENDAR</p><h1>2026–27<br><em>Schedule</em></h1><p>Upcoming matches, showcases and team events for college coach planning.</p><span class="type-hero-number">02</span></section>
 <section class="schedule-layout">
   <div><div class="schedule-controls" data-schedule-controls><button class="active" type="button" data-mode="matches" aria-pressed="true">Matches & showcases</button><button type="button" data-mode="all" aria-pressed="false">All team events</button><span class="schedule-sync" data-schedule-updated></span></div><div class="fixtures" id="fixtures"><p class="schedule-loading">Loading upcoming matches…</p></div><p class="schedule-note">Schedule sourced from the West Florida Flames team calendar.</p></div>
