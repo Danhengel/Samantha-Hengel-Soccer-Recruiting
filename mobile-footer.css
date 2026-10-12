@@ -51,15 +51,10 @@
     letter-spacing:.06em!important;
     text-transform:uppercase!important;
   }
+  /* The same media links are already in the mobile header. */
   .recruiting-footer .recruiting-footer-links,
   .ref-shell > .recruiting-footer .recruiting-footer-links {
-    display:flex!important;
-    flex-wrap:wrap!important;
-    justify-content:center!important;
-    align-items:center!important;
-    width:100%!important;
-    max-width:520px!important;
-    gap:3px 10px!important;
+    display:none!important;
   }
   .recruiting-footer .recruiting-footer-links a,
   .ref-shell > .recruiting-footer .recruiting-footer-links a {
