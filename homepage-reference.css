@@ -701,3 +701,119 @@ body.ref-home{
    font-size:8px!important;
  }
 }
+
+
+/* 2026-10-12: readable, scrollable homepage layout on phones */
+@media (max-width:900px){
+  html,body{width:100%;height:auto;min-height:100%;overflow-x:hidden}
+  body.ref-home{display:block;min-height:100svh;padding:0;overflow-x:hidden;background:#f7f1e8}
+  .ref-shell{
+    display:flex;flex-direction:column;
+    width:100%;height:auto!important;min-height:100svh!important;max-height:none;
+    padding:0!important;overflow:hidden!important;aspect-ratio:auto;
+    border-radius:0;box-shadow:none;
+  }
+  .ref-shell:before{background-position:center;opacity:.16}
+  .ref-shell:after{background:linear-gradient(180deg,rgba(250,244,234,.5),transparent 55%);backdrop-filter:none}
+  .ref-paper{background:linear-gradient(145deg,#faf4ea 0%,#f0e5d7 57%,#c5ccd0 100%)}
+  .ref-nav{
+    position:relative!important;top:auto!important;left:auto!important;right:auto!important;
+    flex:none;display:flex!important;flex-direction:column!important;align-items:center!important;
+    width:100%;height:auto!important;min-height:0!important;
+    padding:10px 14px 8px!important;gap:0!important;
+    background:rgba(250,246,239,.94);border-bottom:1px solid rgba(7,29,51,.09);
+  }
+  .ref-nav nav{
+    display:flex!important;justify-content:center!important;align-items:center!important;
+    flex-wrap:wrap!important;width:100%!important;max-width:480px;
+    gap:0 9px!important;margin:0!important;padding:0!important;
+    transform:none!important;overflow:visible!important;
+  }
+  .ref-nav nav a,.ref-nav nav a[href="profile.html"]{
+    display:inline-flex!important;align-items:center!important;justify-content:center!important;
+    min-height:44px!important;margin:0!important;padding:9px 6px!important;
+    color:#071d33!important;background:transparent!important;border:0!important;
+    border-radius:0!important;font-size:11px!important;font-weight:800!important;
+    line-height:1.2!important;letter-spacing:.07em!important;
+  }
+  .ref-nav nav .recruit-nav{
+    min-height:38px!important;margin:3px 0!important;padding:7px 10px!important;
+    border:1px solid rgba(7,29,51,.45)!important;
+  }
+  .ref-nav .mobile-media-links{
+    position:static!important;display:flex!important;flex-wrap:wrap!important;
+    justify-content:center!important;gap:0 12px!important;width:100%!important;height:auto!important;
+    margin:0!important;padding:0!important;background:none!important;backdrop-filter:none;
+  }
+  .ref-nav .mobile-media-links a{
+    display:inline-flex;align-items:center;min-height:30px;
+    font-size:10px!important;line-height:1.2!important;letter-spacing:.07em;
+  }
+  .ref-action-wrap{display:none!important}
+  .ref-vignette{display:none!important}
+  .ref-copy{
+    position:relative!important;flex:none;left:auto!important;right:auto!important;top:auto!important;
+    width:100%!important;max-width:600px;margin:0 auto;
+    padding:22px 22px 10px;overflow:visible!important;z-index:8!important;
+  }
+  .ref-title{position:relative;display:flex;flex-direction:column;width:100%;height:auto!important;max-height:none!important;margin:0 0 8px;overflow:visible!important}
+  .ref-first{
+    position:relative!important;display:block!important;left:auto!important;top:auto!important;
+    width:max-content;height:auto!important;margin:0;
+    font-size:clamp(55px,16vw,82px)!important;line-height:.98!important;
+    transform:rotate(-4deg)!important;transform-origin:left center!important;
+    white-space:nowrap!important;overflow:visible!important;
+  }
+  .ref-last{
+    position:relative!important;display:block!important;left:auto!important;top:auto!important;
+    width:max-content;margin:-7px 0 0!important;
+    font-size:clamp(61px,17vw,88px)!important;line-height:.85!important;
+    white-space:nowrap!important;
+  }
+  .ref-class{font-size:11px;line-height:1.4;letter-spacing:.32em}
+  .ref-gold{width:32px;margin:14px 0 12px}
+  .ref-stats{gap:17px}.ref-num{font-size:55px}.ref-vrule{height:58px}
+  .ref-position strong{font-size:12px}.ref-position span{font-size:10px;margin-top:6px}
+  .ref-facts{width:auto;max-width:100%;margin-top:17px;gap:11px}
+  .ref-fact,.ref-copy .ref-fact{gap:11px;font-size:10px!important;line-height:1.35;letter-spacing:.12em!important}
+  .ref-fact b{width:24px;font-size:19px}.ref-fact small{font-size:8px!important;letter-spacing:.16em}
+  .ref-right{
+    position:relative!important;flex:none;right:auto!important;bottom:auto!important;
+    width:100%!important;height:clamp(310px,83vw,500px)!important;
+    margin-top:0;opacity:1!important;overflow:hidden;
+    background:
+      linear-gradient(180deg,rgba(247,241,232,1) 0%,rgba(247,241,232,.25) 28%,rgba(7,29,51,.65) 100%),
+      url("assets/IMG_0387.JPEG") center 53%/cover no-repeat;
+  }
+  .ref-right img{
+    position:relative;z-index:1;width:auto;max-width:100%;height:100%;max-height:100%;
+    margin-left:auto;object-fit:contain;object-position:right bottom;
+  }
+  .ref-right:after{background:linear-gradient(180deg,transparent 72%,rgba(7,29,51,.12))}
+  .ref-shell>.recruiting-footer{
+    position:relative!important;flex:none;left:auto!important;right:auto!important;bottom:auto!important;
+    width:100%!important;display:flex!important;flex-direction:column;align-items:center;
+    gap:9px!important;padding:18px 18px calc(18px + env(safe-area-inset-bottom))!important;
+    background:#f8f1e7!important;backdrop-filter:none!important;
+    text-align:center;z-index:30!important;
+  }
+  .ref-shell>.recruiting-footer .recruiting-footer-identity{display:flex;flex-direction:column;gap:3px}
+  .ref-shell>.recruiting-footer .recruiting-footer-identity strong{font-size:22px}
+  .ref-shell>.recruiting-footer .recruiting-footer-identity span{font-size:9px;line-height:1.5;letter-spacing:.06em}
+  .ref-shell>.recruiting-footer .recruiting-footer-links{
+    display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
+    gap:3px 10px!important;width:100%;max-width:520px;
+  }
+  .ref-shell>.recruiting-footer .recruiting-footer-links a{
+    display:inline-flex!important;align-items:center;justify-content:center;
+    min-height:36px;padding:6px 5px;font-size:10px!important;letter-spacing:.07em!important;
+  }
+  .ref-shell>.recruiting-footer>small{font-size:8px;line-height:1.4}
+}
+@media (max-width:360px){
+  .ref-nav nav{gap:0 5px!important}
+  .ref-nav nav a,.ref-nav nav a[href="profile.html"]{font-size:10px!important;padding:8px 4px!important}
+  .ref-copy{padding-left:18px;padding-right:18px}
+  .ref-first{font-size:51px!important}
+  .ref-last{font-size:60px!important}
+}
