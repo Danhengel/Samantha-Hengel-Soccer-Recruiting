@@ -2546,3 +2546,31 @@ body:not(.home-page)>.recruiting-footer{position:relative!important;inset:auto!i
   outline:2px solid #a47d56!important;outline-offset:2px!important;
  }
 }
+
+/* 2026-10-12: consistent opening labels on interior mobile pages. */
+@media(max-width:900px){
+  .profile-page .profile-feature{
+    grid-template-columns:minmax(0,1fr)!important;
+    padding:24px 24px 40px!important;
+  }
+  .profile-page .profile-feature .profile-overview{grid-row:1!important}
+  .profile-page .profile-feature .intro-photo{grid-row:2!important}
+  body.film-page main .film-hero{padding:24px 24px 44px!important}
+  body.schedule-page main .schedule-hero{padding:24px 24px 16px!important}
+  body.academics-page main .academic-hero-copy{padding:24px 24px 20px!important}
+  body:has(.coach-quick-hero) main .coach-quick-hero{padding:24px 24px 40px!important}
+  .profile-page .profile-overview>.kicker,
+  .film-page .film-intro>.kicker,
+  .schedule-page .schedule-hero>.kicker,
+  .academics-page .academic-hero-copy>.kicker,
+  body:has(.coach-quick-hero) .coach-quick-hero .kicker{
+    display:block!important;
+    margin:0 0 12px!important;
+    padding:0!important;
+    color:#9e7b57!important;
+    font:700 11px/1.4 Manrope,Arial,sans-serif!important;
+    letter-spacing:.16em!important;
+    text-transform:uppercase!important;
+    opacity:1!important;
+  }
+}
