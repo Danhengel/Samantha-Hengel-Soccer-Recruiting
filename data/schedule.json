@@ -1,6 +1,6 @@
 {
   "source": "https://ssprodst.blob.core.windows.net/calendars/481/113342.ics",
-  "updated": "2026-11-01T13:19:24.937161+00:00",
+  "updated": "2026-11-01T21:59:27.776858+00:00",
   "events": [
     {
       "start": "2026-07-15T19:00:00",
@@ -387,14 +387,6 @@
       "url": ""
     },
     {
-      "start": "2026-10-24T11:00:00",
-      "end": "2026-10-24T13:00:00",
-      "title": "U17G_09/10G GA Aspire @ Palm Beach Kicks Aspire 09/10",
-      "location": "Mirasol Park   12385 Jog Rd North , Palm Beach Gardens, FL 33418",
-      "description": "Field: Field 1 Arrival: 1 hour(s) in advance Game Type: Away Uniform: Navy with Navy Socks Opponent: Palm Beach Kicks Aspire 09/10 ",
-      "url": ""
-    },
-    {
       "start": "2026-10-25T13:00:00",
       "end": "2026-10-25T15:00:00",
       "title": "U17G_09/10G GA Aspire @ FL United Aspire 09/10",
@@ -437,7 +429,7 @@
     {
       "start": "2026-11-01T13:45:00",
       "end": "2026-11-01T15:45:00",
-      "title": "U17G_09/10G GA Aspire @ TBU N1 G2009/10 Premier",
+      "title": "CANCELLED - U17G_09/10G GA Aspire @ TBU N1 G2009/10 Premier",
       "location": "Ed Radice Sports Complex  14720 Ed Radice Drive, Tampa, FL 33626",
       "description": "Field: Field 4 Turf Arrival: 1 hour(s) in advance Game Type: Away Uniform: Navy Opponent: TBU N1 G2009/10 Premier ",
       "url": ""
@@ -464,14 +456,6 @@
       "title": "U17G_09/10G GA Aspire - Practice",
       "location": "J.C. Handly Sports Complex  3042 South Kings Avenue, Brandon, FL 33511",
       "description": "Arrival: 15 minutes in advance ",
-      "url": ""
-    },
-    {
-      "start": "2026-11-07T09:00:00",
-      "end": "2026-11-07T11:00:00",
-      "title": "U17G_09/10G GA Aspire vs FL Premier FC N1 G2009/10  WC",
-      "location": "J.C. Handly Sports Complex  3042 South Kings Avenue, Brandon, FL 33511",
-      "description": "Field: Field 7 Arrival: 1 hour(s) in advance Game Type: Home Uniform: White  Opponent: FL Premier FC N1 G2009/10  WC ",
       "url": ""
     },
     {
@@ -552,6 +536,14 @@
       "title": "U17G_09/10G GA Aspire @ IMG Academy N1 G2009/10",
       "location": "IMG Academy  5650 Bollettieri Blvd, Bradenton, FL 34210",
       "description": "N1 game 4488  Field: Field #3 Arrival: 1 hour(s) in advance Game Type: Away Uniform: Navy Opponent: IMG Academy N1 G2009/10  ",
+      "url": ""
+    },
+    {
+      "start": "2027-02-07T00:00:00",
+      "end": "2027-02-08T00:00:00",
+      "title": "U17G_09/10G GA Aspire vs FL Premier FC N1 G2009/10  WC",
+      "location": "J.C. Handly Sports Complex  3042 South Kings Avenue, Brandon, FL 33511",
+      "description": "Field: Field 7 Arrival: 1 hour(s) in advance Game Type: Home Uniform: White  Opponent: FL Premier FC N1 G2009/10  WC ",
       "url": ""
     },
     {
