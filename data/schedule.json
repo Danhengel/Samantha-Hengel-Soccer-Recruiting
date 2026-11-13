@@ -1,6 +1,6 @@
 {
   "source": "https://ssprodst.blob.core.windows.net/calendars/481/113342.ics",
-  "updated": "2026-11-13T06:41:12.706759+00:00",
+  "updated": "2026-11-13T19:39:22.188226+00:00",
   "events": [
     {
       "start": "2026-07-15T19:00:00",
@@ -528,6 +528,14 @@
       "title": "U17G_09/10G GA Aspire @ NCFC tournament",
       "location": "",
       "description": "Game Type: Away Opponent: NCFC tournament  ",
+      "url": ""
+    },
+    {
+      "start": "2026-11-20T18:30:00",
+      "end": "2026-11-20T20:30:00",
+      "title": "U17G_09/10G GA Aspire - Mandatory Team Bonding Dinner",
+      "location": "",
+      "description": "Parents. I will be there. This is not optional. thanks!  ",
       "url": ""
     },
     {
